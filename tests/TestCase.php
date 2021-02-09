@@ -24,7 +24,7 @@ class TestCase extends BaseTestCase
                 'refresh_token' => 'bar',
                 'expires_in' => time() + 86400,
                 'shop_id' => 123,
-                'shop_name' => 'test shop'
+                'shop_name' => 'test shop',
             ])
             ->getMock()
             ->shouldIgnoreMissing();

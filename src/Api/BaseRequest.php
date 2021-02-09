@@ -63,13 +63,13 @@ class BaseRequest
             $params = $this->generateParams($url, $params);
         }
 
-        $response = $this->client->$method($this->baseUrl . $url, $params);
+        $response = $this->client->$method($this->baseUrl.$url, $params);
 
         return json_decode($response->getBody()->getContents(), true);
     }
 
     /**
-     * 组合请求参数
+     * 组合请求参数.
      *
      * @param string $url
      * @param array $params
@@ -86,26 +86,26 @@ class BaseRequest
             'timestamp' => date('Y-m-d H:i:s'),
             'v' => '2',
             'method' => $url,
-            'access_token' => $accessToken
+            'access_token' => $accessToken,
         ];
 
         ksort($params);
-        $param_json = json_encode((object)$params, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        $param_json = json_encode((object) $params, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
-        $str = "app_key" . $public['app_key'] . "method" . $url . "param_json" . $param_json . "timestamp" . $public['timestamp'] . "v" . $public['v'];
-        $md5_str = $this->config['app_secret'] . $str . $this->config['app_secret'];
+        $str = 'app_key'.$public['app_key'].'method'.$url.'param_json'.$param_json.'timestamp'.$public['timestamp'].'v'.$public['v'];
+        $md5_str = $this->config['app_secret'].$str.$this->config['app_secret'];
         $sign = md5($md5_str);
 
         return array_merge($public,
             [
                 'param_json' => $param_json,
-                'sign' => $sign
+                'sign' => $sign,
             ]
         );
     }
 
     /**
-     * 获取TOKEN
+     * 获取TOKEN.
      *
      * @return mixed|string
      * @throws RequestException
@@ -114,7 +114,7 @@ class BaseRequest
     private function getAccessToken(): string
     {
         $oauthToken = Cache::get(self::OAUTH_CACHE_KEY, []);
-        if (!$oauthToken) {
+        if (! $oauthToken) {
             return $this->requestAccessToken();
         }
 
@@ -126,7 +126,7 @@ class BaseRequest
     }
 
     /**
-     * 请求TOKEN
+     * 请求TOKEN.
      *
      * @return string
      * @throws RequestException
@@ -150,7 +150,7 @@ class BaseRequest
     }
 
     /**
-     * 刷新TOKEN
+     * 刷新TOKEN.
      *
      * @param string $refreshToken
      * @return string
@@ -163,7 +163,7 @@ class BaseRequest
             'app_id' => $this->config['app_key'],
             'app_secret' => $this->config['app_secret'],
             'grant_type' => 'refresh_token',
-            'refresh_token' => $refreshToken
+            'refresh_token' => $refreshToken,
         ];
 
         $response = $this->httpGet('oauth2/refresh_token', $param, false);

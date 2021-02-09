@@ -8,7 +8,7 @@ use Psr\SimpleCache\InvalidArgumentException;
 class AfterSale extends BaseRequest
 {
     /**
-     * 商家为订单添加售后备注
+     * 商家为订单添加售后备注.
      *
      * @param array $params
      * @return array
@@ -21,7 +21,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 商家处理换货申请
+     * 商家处理换货申请.
      *
      * @param array $params
      * @return array
@@ -34,7 +34,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 商家确认是否收到换货
+     * 商家确认是否收到换货.
      *
      * @param array $params
      * @return array
@@ -47,7 +47,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 商家处理发货后仅退款申请
+     * 商家处理发货后仅退款申请.
      *
      * @param array $params
      * @return array
@@ -60,7 +60,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 商家处理退货申请
+     * 商家处理退货申请.
      *
      * @param array $params
      * @return array
@@ -73,7 +73,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 商家确认是否收到退货
+     * 商家确认是否收到退货.
      *
      * @param array $params
      * @return array
@@ -86,7 +86,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 获取已发货且有售后的订单列表（待下线）
+     * 获取已发货且有售后的订单列表（待下线）.
      *
      * @param array $params
      * @return array
@@ -99,7 +99,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 根据子订单ID查询退款详情
+     * 根据子订单ID查询退款详情.
      *
      * @param array $params
      * @return array
@@ -112,7 +112,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 卖家提交举证信息
+     * 卖家提交举证信息.
      *
      * @param array $params
      * @return array
@@ -125,7 +125,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 延长售后收货时限
+     * 延长售后收货时限.
      *
      * @param array $params
      * @return array
@@ -151,7 +151,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 获取备货中有退款的订单列表（待下线）
+     * 获取备货中有退款的订单列表（待下线）.
      *
      * @param array $params
      * @return array
@@ -164,7 +164,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 商家处理备货中退款申请
+     * 商家处理备货中退款申请.
      *
      * @param array $params
      * @return array
@@ -177,7 +177,7 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 售后单列表查询（推荐使用）
+     * 售后单列表查询（推荐使用）.
      *
      * @param array $params
      * @return array

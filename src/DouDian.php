@@ -14,8 +14,7 @@ use Illuminate\Support\Str;
 use InvalidArgumentException;
 
 /**
- * Class DouDian
- * @package Abbotton\DouDian
+ * Class DouDian.
  * @property Shop $shop
  * @property AfterSale $afterSale
  * @property Comment $comment
@@ -30,11 +29,11 @@ class DouDian
 
     public function __construct(array $config = [])
     {
-        if (!isset($config['app_key']) || !$config['app_key']) {
+        if (! isset($config['app_key']) || ! $config['app_key']) {
             throw new InvalidArgumentException('配置有误, 请填写app_key');
         }
 
-        if (!isset($config['app_secret']) || !$config['app_secret']) {
+        if (! isset($config['app_secret']) || ! $config['app_secret']) {
             throw new InvalidArgumentException('配置有误, 请填写app_secret');
         }
 
@@ -43,9 +42,9 @@ class DouDian
 
     public function __get($class)
     {
-        $class = "\\Abbotton\\DouDian\\Api\\" . Str::ucfirst($class);
-        if (!class_exists($class)) {
-            throw new Exception($class . ', Not found', 404);
+        $class = '\\Abbotton\\DouDian\\Api\\'.Str::ucfirst($class);
+        if (! class_exists($class)) {
+            throw new Exception($class.', Not found', 404);
         }
 
         return new $class($this->config);
