@@ -1,0 +1,60 @@
+{
+    "name": "abbotton/laravel-doudian",
+    "description": "抖音小店开放平台SDK",
+    "keywords": [
+        "abbotton",
+        "doudian",
+        "抖音小店",
+        "抖店开放平台",
+        "今日特卖",
+        "抖店",
+        "jinritemai"
+    ],
+    "homepage": "https://github.com/abbotton/laravel-doudian",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Abbotton",
+            "email": "uctoo@foxmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "guzzlehttp/guzzle": ">=6.5",
+        "illuminate/support": ">=6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": ">=4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abbotton\\DouDian\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Abbotton\\DouDian\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abbotton\\DouDian\\DouDianServiceProvider"
+            ],
+            "aliases": {
+                "DouDian": "Abbotton\\DouDian\\DouDianFacade"
+            }
+        }
+    }
+}
