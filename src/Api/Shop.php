@@ -8,7 +8,7 @@ use Psr\SimpleCache\InvalidArgumentException;
 class Shop extends BaseRequest
 {
     /**
-     * 获取店铺的已授权品牌列表
+     * 获取店铺的已授权品牌列表.
      *
      * @return array
      * @throws RequestException
@@ -20,7 +20,7 @@ class Shop extends BaseRequest
     }
 
     /**
-     * 获取店铺后台供商家发布商品的类目
+     * 获取店铺后台供商家发布商品的类目.
      *
      * @param array $params
      * @return array

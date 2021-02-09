@@ -8,7 +8,7 @@ use Psr\SimpleCache\InvalidArgumentException;
 class Logistics extends BaseRequest
 {
     /**
-     * 获取区列表
+     * 获取区列表.
      *
      * @param array $params
      * @return array
@@ -21,7 +21,7 @@ class Logistics extends BaseRequest
     }
 
     /**
-     * 获取市列表
+     * 获取市列表.
      *
      * @param array $params
      * @return array
@@ -34,7 +34,7 @@ class Logistics extends BaseRequest
     }
 
     /**
-     * 获取省列表
+     * 获取省列表.
      *
      * @return array
      * @throws RequestException
@@ -46,7 +46,7 @@ class Logistics extends BaseRequest
     }
 
     /**
-     * 订单发货
+     * 订单发货.
      *
      * @param array $params
      * @return array
@@ -59,7 +59,7 @@ class Logistics extends BaseRequest
     }
 
     /**
-     * 一个父订单可发多个物流包裹
+     * 一个父订单可发多个物流包裹.
      *
      * @param array $params
      * @return array
@@ -72,7 +72,7 @@ class Logistics extends BaseRequest
     }
 
     /**
-     * 支持多个子订单发同一个物流包裹
+     * 支持多个子订单发同一个物流包裹.
      *
      * @param array $params
      * @return array
@@ -85,7 +85,7 @@ class Logistics extends BaseRequest
     }
 
     /**
-     * 获取快递公司列表
+     * 获取快递公司列表.
      *
      * @return array
      * @throws RequestException
@@ -110,7 +110,7 @@ class Logistics extends BaseRequest
     }
 
     /**
-     * 修改包裹里的物流信息
+     * 修改包裹里的物流信息.
      *
      * @param array $params
      * @return array

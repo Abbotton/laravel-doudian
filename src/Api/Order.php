@@ -8,7 +8,7 @@ use Psr\SimpleCache\InvalidArgumentException;
 class Order extends BaseRequest
 {
     /**
-     * 添加订单备注
+     * 添加订单备注.
      *
      * @param array $params
      * @return array
@@ -21,7 +21,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 设置店铺支持地址变更审核
+     * 设置店铺支持地址变更审核.
      *
      * @param array $params
      * @return array
@@ -34,7 +34,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 买家地址变更确认
+     * 买家地址变更确认.
      *
      * @param array $params
      * @return array
@@ -60,7 +60,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 取消货到付款订单
+     * 取消货到付款订单.
      *
      * @param array $params
      * @return array
@@ -73,7 +73,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 获取订单详情
+     * 获取订单详情.
      *
      * @param array $params
      * @return array
@@ -86,7 +86,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 获取服务单列表
+     * 获取服务单列表.
      *
      * @param array $params
      * @return array
@@ -99,7 +99,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 获取订单列表
+     * 获取订单列表.
      *
      * @param array $params
      * @return array
@@ -138,7 +138,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 获取服务请求列表
+     * 获取服务请求列表.
      *
      * @param array $params
      * @return array
@@ -151,7 +151,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 确认货到付款订单
+     * 确认货到付款订单.
      *
      * @param array $params
      * @return array
@@ -164,7 +164,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 未支付订单改货款
+     * 未支付订单改货款.
      *
      * @param array $params
      * @return array
@@ -177,7 +177,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 未支付订单邮费修改
+     * 未支付订单邮费修改.
      *
      * @param array $params
      * @return array
@@ -190,7 +190,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 查询订单账单明细
+     * 查询订单账单明细.
      *
      * @param array $params
      * @return array
@@ -203,7 +203,7 @@ class Order extends BaseRequest
     }
 
     /**
-     * 获取运费险保单详情
+     * 获取运费险保单详情.
      *
      * @param array $params
      * @return array

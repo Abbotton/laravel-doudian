@@ -8,7 +8,7 @@ use Psr\SimpleCache\InvalidArgumentException;
 class WareHouse extends BaseRequest
 {
     /**
-     * 查询库存
+     * 查询库存.
      *
      * @param array $params
      * @return array
@@ -21,7 +21,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 创建单个区域仓
+     * 创建单个区域仓.
      *
      * @param array $params
      * @return array
@@ -34,7 +34,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 批量创建区域仓
+     * 批量创建区域仓.
      *
      * @param array $params
      * @return array
@@ -47,7 +47,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 编辑区域仓
+     * 编辑区域仓.
      *
      * @param array $params
      * @return array
@@ -60,7 +60,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 查询区域仓
+     * 查询区域仓.
      *
      * @param array $params
      * @return array
@@ -73,7 +73,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 批量查询区域仓
+     * 批量查询区域仓.
      *
      * @param array $params
      * @return array
@@ -86,7 +86,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 地址与区域仓解绑
+     * 地址与区域仓解绑.
      *
      * @param array $params
      * @return array
@@ -99,7 +99,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 绑定单个地址到区域仓
+     * 绑定单个地址到区域仓.
      *
      * @param array $params
      * @return array
@@ -112,7 +112,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 批量绑定地址与区域仓
+     * 批量绑定地址与区域仓.
      *
      * @param array $params
      * @return array
@@ -125,7 +125,7 @@ class WareHouse extends BaseRequest
     }
 
     /**
-     * 设置指定地址下的仓的优先级
+     * 设置指定地址下的仓的优先级.
      *
      * @param array $params
      * @return array

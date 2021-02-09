@@ -8,7 +8,7 @@ use Psr\SimpleCache\InvalidArgumentException;
 class Comment extends BaseRequest
 {
     /**
-     * 评价列表查询
+     * 评价列表查询.
      *
      * @param array $params
      * @return array
@@ -21,7 +21,7 @@ class Comment extends BaseRequest
     }
 
     /**
-     * 评价回复
+     * 评价回复.
      *
      * @param array $params
      * @return array

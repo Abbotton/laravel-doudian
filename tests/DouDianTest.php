@@ -22,7 +22,7 @@ class DouDianTest extends TestCase
 
     public function test_can_throw_class_not_found_exception()
     {
-        $this->expectExceptionMessage($this->getClass('foo') . ", Not found");
+        $this->expectExceptionMessage($this->getClass('foo').', Not found');
         $this->expectExceptionCode(404);
         $config = $this->getConfig();
 
@@ -31,7 +31,7 @@ class DouDianTest extends TestCase
 
     private function getClass($class): string
     {
-        return 'Abbotton\\DouDian\\Api\\' . ucfirst($class);
+        return 'Abbotton\\DouDian\\Api\\'.ucfirst($class);
     }
 
     private function getConfig(): array
