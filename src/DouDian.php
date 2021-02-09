@@ -11,7 +11,6 @@ use Abbotton\DouDian\Api\Shop;
 use Abbotton\DouDian\Api\WareHouse;
 use Exception;
 use Illuminate\Support\Str;
-use InvalidArgumentException;
 
 /**
  * Class DouDian.
