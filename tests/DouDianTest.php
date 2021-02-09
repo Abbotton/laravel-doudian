@@ -14,10 +14,10 @@ class DouDianTest extends TestCase
     public function test_can_throw_invalid_argument_exception()
     {
         $this->expectExceptionMessage('配置有误, 请填写app_key');
-        (new DouDian());
+        (new DouDian())->shop->brandList();
 
         $this->expectExceptionMessage('配置有误, 请填写app_secret');
-        (new DouDian(['app_key' => 'foo']));
+        (new DouDian(['app_key' => 'foo']))->shop->brandList();
     }
 
     public function test_can_throw_class_not_found_exception()

@@ -29,14 +29,6 @@ class DouDian
 
     public function __construct(array $config = [])
     {
-        if (! isset($config['app_key']) || ! $config['app_key']) {
-            throw new InvalidArgumentException('配置有误, 请填写app_key');
-        }
-
-        if (! isset($config['app_secret']) || ! $config['app_secret']) {
-            throw new InvalidArgumentException('配置有误, 请填写app_secret');
-        }
-
         $this->config = $config;
     }
 
