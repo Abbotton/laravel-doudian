@@ -69,8 +69,13 @@ class BaseRequest
         if ($needSign) {
             $params = $this->generateParams($url, $params);
         }
+        $options['headers'] = [
+            'Content-Type' => 'application/x-www-form-urlencoded',
+        ];
+        $key = $method == 'get' ? 'query' : 'form_params';
+        $options[$key] = $params;
 
-        $response = $this->client->$method($this->baseUrl.$url, $params);
+        $response = $this->client->request($method, $this->baseUrl.$url, $options);
 
         return json_decode($response->getBody()->getContents(), true);
     }
