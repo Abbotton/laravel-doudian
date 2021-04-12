@@ -214,4 +214,30 @@ class Order extends BaseRequest
     {
         return $this->httpPost('order/insurance', $params);
     }
+
+    /**
+     * 新版查询订单的详细信息.
+     *
+     * @param array $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function orderDetail(array $params): array
+    {
+        return $this->httpPost('order/orderDetail', $params);
+    }
+
+    /**
+     * 订单列表查询.
+     *
+     * @param array $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function searchList(array $params): array
+    {
+        return $this->httpPost('order/searchList', $params);
+    }
 }
