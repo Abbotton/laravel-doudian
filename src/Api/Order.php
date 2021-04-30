@@ -28,7 +28,7 @@ class Order extends BaseRequest
      * @throws RequestException
      * @throws InvalidArgumentException
      */
-    public function AddressAppliedSwitch(array $params): array
+    public function addressAppliedSwitch(array $params): array
     {
         return $this->httpPost('order/AddressAppliedSwitch', $params);
     }
