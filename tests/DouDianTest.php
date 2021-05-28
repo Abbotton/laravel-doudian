@@ -56,7 +56,7 @@ class DouDianTest extends TestCase
 
         $responseJson = '{"data":[],"err_no":0,"message":"success"}';
         $responseData = json_decode($responseJson, true);
-        $classArray = ['shop', 'afterSale', 'comment', 'logistics', 'order', 'product', 'wareHouse'];
+        $classArray = ['afterSale', 'alliance', 'bats', 'comment', 'logistics', 'order', 'orderCode', 'product', 'shop', 'storage', 'wareHouse'];
 
         foreach ($classArray as &$class) {
             $reflectionClass = new ReflectionClass($app->$class);

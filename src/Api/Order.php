@@ -240,4 +240,29 @@ class Order extends BaseRequest
     {
         return $this->httpPost('order/searchList', $params);
     }
+
+    /**
+     * 获取跨境承运单信息.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getCrossBorderFulfillInfo(array $params): array
+    {
+        return $this->httpPost('order/getCrossBorderFulfillInfo', $params);
+    }
+
+    /**
+     * 获取App对于商家订单修改地址的审核权限.
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function addresSwitchConfig(): array
+    {
+        return $this->httpPost('order/addresSwitchConfig');
+    }
 }

@@ -224,4 +224,17 @@ class Logistics extends BaseRequest
     {
         return $this->httpPost('logistics/updateOrder', $params);
     }
+
+    /**
+     * 查询跨境订单列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function orderList(array $params): array
+    {
+        return $this->httpPost('crossBorder/orderList', $params);
+    }
 }
