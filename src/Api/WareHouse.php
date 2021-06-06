@@ -136,4 +136,17 @@ class WareHouse extends BaseRequest
     {
         return $this->httpPost('warehouse/setPriority', $params);
     }
+
+    /**
+     * 设置sku发货时效.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function setSkuShipTime(array $params): array
+    {
+        return $this->httpPost('promise/setSkuShipTime', $params);
+    }
 }
