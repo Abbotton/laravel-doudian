@@ -8,44 +8,6 @@ use Psr\SimpleCache\InvalidArgumentException;
 class Logistics extends BaseRequest
 {
     /**
-     * 获取区列表.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function areaList(array $params): array
-    {
-        return $this->httpPost('address/areaList', $params);
-    }
-
-    /**
-     * 获取市列表.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function cityList(array $params): array
-    {
-        return $this->httpPost('address/cityList', $params);
-    }
-
-    /**
-     * 获取省列表.
-     *
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function provinceList(): array
-    {
-        return $this->httpPost('address/provinceList');
-    }
-
-    /**
      * 订单发货.
      *
      * @param array $params

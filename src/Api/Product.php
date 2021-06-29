@@ -21,19 +21,6 @@ class Product extends BaseRequest
     }
 
     /**
-     * 添加商品
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function productAdd(array $params): array
-    {
-        return $this->httpPost('product/add', $params);
-    }
-
-    /**
      * 商品发布新接口.
      *
      * @param array $params
@@ -164,32 +151,6 @@ class Product extends BaseRequest
     }
 
     /**
-     * 添加SKU.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function skuAdd(array $params): array
-    {
-        return $this->httpPost('sku/add', $params);
-    }
-
-    /**
-     * 批量添加sku.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function addAll(array $params): array
-    {
-        return $this->httpPost('sku/addAll', $params);
-    }
-
-    /**
      * 获取商品sku详情.
      *
      * @param array $params
@@ -281,53 +242,15 @@ class Product extends BaseRequest
     }
 
     /**
-     * 添加规格
+     * 获取商品列表新版.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
-     * @throws RequestException
      * @throws InvalidArgumentException
-     */
-    public function specAdd(array $params): array
-    {
-        return $this->httpPost('spec/add', $params);
-    }
-
-    /**
-     * 删除规格
-     *
-     * @param array $params
-     * @return array
      * @throws RequestException
-     * @throws InvalidArgumentException
      */
-    public function specDel(array $params): array
+    public function listV2(array $params): array
     {
-        return $this->httpPost('spec/del', $params);
-    }
-
-    /**
-     * 获取规格列表.
-     *
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function specList(): array
-    {
-        return $this->httpPost('spec/list');
-    }
-
-    /**
-     * 获取规格详情.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function specDetail(array $params): array
-    {
-        return $this->httpPost('spec/specDetail', $params);
+        return $this->httpPost('product/listV2', $params);
     }
 }

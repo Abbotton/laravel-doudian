@@ -73,19 +73,6 @@ class Order extends BaseRequest
     }
 
     /**
-     * 获取订单详情.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function detail(array $params): array
-    {
-        return $this->httpPost('order/detail', $params);
-    }
-
-    /**
      * 获取服务单列表.
      *
      * @param array $params
@@ -96,19 +83,6 @@ class Order extends BaseRequest
     public function getServiceList(array $params): array
     {
         return $this->httpPost('order/getServiceList', $params);
-    }
-
-    /**
-     * 获取订单列表.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function list(array $params): array
-    {
-        return $this->httpPost('order/list', $params);
     }
 
     /**
@@ -264,5 +238,83 @@ class Order extends BaseRequest
     public function addresSwitchConfig(): array
     {
         return $this->httpPost('order/addresSwitchConfig');
+    }
+
+    /**
+     * 查询账单明细.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getSettleBillDetail(array $params): array
+    {
+        return $this->httpPost('order/getSettleBillDetail', $params);
+    }
+
+    /**
+     * 批量加密接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function batchEncrypt(array $params): array
+    {
+        return $this->httpPost('order/batchEncrypt', $params);
+    }
+
+    /**
+     * 获取订单加密索引串.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getSearchIndex(array $params): array
+    {
+        return $this->httpPost('order/getSearchIndex', $params);
+    }
+
+    /**
+     * 批量脱敏接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function batchSensitive(array $params): array
+    {
+        return $this->httpPost('order/batchSensitive', $params);
+    }
+
+    /**
+     * 批量解密接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function batchDecrypt(array $params): array
+    {
+        return $this->httpPost('order/batchDecrypt', $params);
+    }
+
+    /**
+     * 批量获取索引串接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function batchSearchIndex(array $params): array
+    {
+        return $this->httpPost('order/BatchSearchIndex', $params);
     }
 }

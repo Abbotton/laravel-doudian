@@ -58,4 +58,30 @@ class Bats extends BaseRequest
     {
         return $this->httpPost('btas/shipping', $params);
     }
+
+    /**
+     * 图片质检送检.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function saveInspectionOnline(array $params): array
+    {
+        return $this->httpPost('btas/saveInspectionOnline', $params);
+    }
+
+    /**
+     * 获取可图片鉴定的品牌.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function listBrand(array $params): array
+    {
+        return $this->httpPost('btas/listBrand', $params);
+    }
 }
