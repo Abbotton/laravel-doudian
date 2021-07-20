@@ -317,4 +317,30 @@ class Order extends BaseRequest
     {
         return $this->httpPost('order/BatchSearchIndex', $params);
     }
+
+    /**
+     * 查看商家开票列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function invoiceList(array $params): array
+    {
+        return $this->httpPost('order/invoiceList', $params);
+    }
+
+    /**
+     * 订单商品的序列号上传.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function addSerialNumber(array $params): array
+    {
+        return $this->httpPost('order/addSerialNumber', $params);
+    }
 }

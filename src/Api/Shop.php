@@ -22,7 +22,7 @@ class Shop extends BaseRequest
     /**
      * 获取店铺后台供商家发布商品的类目.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
      * @throws RequestException
      * @throws InvalidArgumentException
@@ -30,5 +30,18 @@ class Shop extends BaseRequest
     public function getShopCategory(array $params): array
     {
         return $this->httpPost('shop/getShopCategory', $params);
+    }
+
+    /**
+     * 售后地址列表接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function addressList(array $params): array
+    {
+        return $this->httpPost('address/list', $params);
     }
 }

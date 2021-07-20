@@ -66,6 +66,7 @@ class BaseRequest
      */
     private function request(string $method, string $url, array $params = [], bool $needSign = true): array
     {
+        $options = [];
         if ($needSign) {
             $params = $this->generateParams($url, $params);
         }

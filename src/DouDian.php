@@ -7,7 +7,10 @@ use Abbotton\DouDian\Api\Alliance;
 use Abbotton\DouDian\Api\AntiSpam;
 use Abbotton\DouDian\Api\Bats;
 use Abbotton\DouDian\Api\Comment;
+use Abbotton\DouDian\Api\Coupons;
+use Abbotton\DouDian\Api\CrossBorder;
 use Abbotton\DouDian\Api\Logistics;
+use Abbotton\DouDian\Api\Lop;
 use Abbotton\DouDian\Api\Member;
 use Abbotton\DouDian\Api\Order;
 use Abbotton\DouDian\Api\OrderCode;
@@ -27,7 +30,10 @@ use Illuminate\Support\Str;
  * @property AntiSpam $antiSpam
  * @property Bats $bats
  * @property Comment $comment
+ * @property Coupons $coupons
+ * @property CrossBorder $crossBorder
  * @property Logistics $logistics
+ * @property Lop $lop
  * @property Member $member
  * @property Order $order
  * @property OrderCode $orderCode
