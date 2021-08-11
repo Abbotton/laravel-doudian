@@ -214,4 +214,30 @@ class AfterSale extends BaseRequest
     {
         return $this->httpPost('afterSale/Operate', $params);
     }
+
+    /**
+     * 打开售后通道，使用户可以发起超级售后.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function openAfterSaleChannel(array $params = []): array
+    {
+        return $this->httpPost('afterSale/OpenAfterSaleChannel', $params);
+    }
+
+    /**
+     * 售后列表接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function List(array $params = []): array
+    {
+        return $this->httpPost('afterSale/List', $params);
+    }
 }

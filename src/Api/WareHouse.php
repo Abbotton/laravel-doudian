@@ -149,4 +149,17 @@ class WareHouse extends BaseRequest
     {
         return $this->httpPost('promise/setSkuShipTime', $params);
     }
+
+    /**
+     * 库存调整(盘点和转移).
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function adjustInventory(array $params): array
+    {
+        return $this->httpPost('warehouse/adjustInventory', $params);
+    }
 }

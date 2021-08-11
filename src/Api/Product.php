@@ -253,4 +253,43 @@ class Product extends BaseRequest
     {
         return $this->httpPost('product/listV2', $params);
     }
+
+    /**
+     * 获取商品列表新版.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function opptyProductApply(array $params): array
+    {
+        return $this->httpPost('opptyProduct/apply', $params);
+    }
+
+    /**
+     * 机会品线索触达.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function opptyProductClue(array $params): array
+    {
+        return $this->httpPost('opptyProduct/clue', $params);
+    }
+
+    /**
+     * 机会品提报进度查询.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function opptyProductGetApplyProgress(array $params): array
+    {
+        return $this->httpPost('opptyProduct/getApplyProgress', $params);
+    }
 }

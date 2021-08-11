@@ -44,4 +44,30 @@ class Shop extends BaseRequest
     {
         return $this->httpPost('address/list', $params);
     }
+
+    /**
+     * 店铺创建售后地址接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function addressCreate(array $params): array
+    {
+        return $this->httpPost('address/create', $params);
+    }
+
+    /**
+     * 店铺创建售后地址接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function addressUpdate(array $params): array
+    {
+        return $this->httpPost('address/update', $params);
+    }
 }

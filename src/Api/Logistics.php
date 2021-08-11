@@ -186,4 +186,30 @@ class Logistics extends BaseRequest
     {
         return $this->httpPost('logistics/updateOrder', $params);
     }
+
+    /**
+     * 提供给isv查询运单轨迹的接口.
+     *
+     * @param array $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function trackNoRouteDetail(array $params): array
+    {
+        return $this->httpPost('logistics/trackNoRouteDetail', $params);
+    }
+
+    /**
+     * 查询商家自定义区模板（新版）.
+     *
+     * @param array $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getCustomTemplateList(array $params): array
+    {
+        return $this->httpPost('logistics/getCustomTemplateList', $params);
+    }
 }

@@ -6,11 +6,12 @@ use Abbotton\DouDian\Api\AfterSale;
 use Abbotton\DouDian\Api\Alliance;
 use Abbotton\DouDian\Api\AntiSpam;
 use Abbotton\DouDian\Api\Bats;
+use Abbotton\DouDian\Api\BuyIn;
 use Abbotton\DouDian\Api\Comment;
 use Abbotton\DouDian\Api\Coupons;
 use Abbotton\DouDian\Api\CrossBorder;
 use Abbotton\DouDian\Api\Logistics;
-use Abbotton\DouDian\Api\Lop;
+use Abbotton\DouDian\Api\Iop;
 use Abbotton\DouDian\Api\Member;
 use Abbotton\DouDian\Api\Order;
 use Abbotton\DouDian\Api\OrderCode;
@@ -20,6 +21,7 @@ use Abbotton\DouDian\Api\Spu;
 use Abbotton\DouDian\Api\Storage;
 use Abbotton\DouDian\Api\Test;
 use Abbotton\DouDian\Api\WareHouse;
+use Abbotton\DouDian\Api\Yunc;
 use Exception;
 use Illuminate\Support\Str;
 
@@ -29,11 +31,12 @@ use Illuminate\Support\Str;
  * @property Alliance $alliance
  * @property AntiSpam $antiSpam
  * @property Bats $bats
+ * @property BuyIn $buyIn
  * @property Comment $comment
  * @property Coupons $coupons
  * @property CrossBorder $crossBorder
  * @property Logistics $logistics
- * @property Lop $lop
+ * @property Iop $iop
  * @property Member $member
  * @property Order $order
  * @property OrderCode $orderCode
@@ -43,6 +46,7 @@ use Illuminate\Support\Str;
  * @property Spu $spu
  * @property Test $test
  * @property WareHouse $wareHouse
+ * @property Yunc $yunc
  */
 class DouDian
 {

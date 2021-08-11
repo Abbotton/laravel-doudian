@@ -5,7 +5,7 @@ namespace Abbotton\DouDian\Api;
 use Illuminate\Http\Client\RequestException;
 use Psr\SimpleCache\InvalidArgumentException;
 
-class Lop extends BaseRequest
+class Iop extends BaseRequest
 {
     /**
      * 查询店铺身份.
@@ -67,7 +67,7 @@ class Lop extends BaseRequest
      */
     public function waybillReturn(array $params): array
     {
-        return $this->httpPost('iop/waybillCancel', $params);
+        return $this->httpPost('iop/waybillReturn', $params);
     }
 
     /**

@@ -32,4 +32,17 @@ class OrderCode extends BaseRequest
     {
         return $this->httpPost('orderCode/erpShopBindOrderCode', $params);
     }
+
+    /**
+     * 批量下载bic订单码.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function batchGetOrderCodeByShop(array $params): array
+    {
+        return $this->httpPost('orderCode/orderCode/batchGetOrderCodeByShop', $params);
+    }
 }
