@@ -343,4 +343,17 @@ class Order extends BaseRequest
     {
         return $this->httpPost('order/addSerialNumber', $params);
     }
+
+    /**
+     * 发票信息回传API.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function invoiceUpload(array $params): array
+    {
+        return $this->httpPost('order/invoiceUpload', $params);
+    }
 }

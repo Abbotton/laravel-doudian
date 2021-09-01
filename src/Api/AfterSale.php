@@ -240,4 +240,30 @@ class AfterSale extends BaseRequest
     {
         return $this->httpPost('afterSale/List', $params);
     }
+
+    /**
+     * 商家经过质检确认用户退货入仓无误后，售后小助手自动同意退款.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function returnGoodsToWareHouseSuccess(array $params = []): array
+    {
+        return $this->httpPost('afterSale/returnGoodsToWareHouseSuccess', $params);
+    }
+
+    /**
+     * 商家在未发货仅退款途中取消发货状态，小助手自动同意退款.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function cancelSendGoodsSuccess(array $params = []): array
+    {
+        return $this->httpPost('afterSale/CancelSendGoodsSuccess', $params);
+    }
 }

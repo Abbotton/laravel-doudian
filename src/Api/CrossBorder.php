@@ -58,4 +58,43 @@ class CrossBorder extends BaseRequest
     {
         return $this->httpPost('dutyFree/orderConfirm', $params);
     }
+
+    /**
+     * 入库和提货出库回告.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function warehouseInOutboundEvent(array $params): array
+    {
+        return $this->httpPost('crossBorder/warehouseInOutboundEvent', $params);
+    }
+
+    /**
+     * 库存盘点回告.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function stockTaking(array $params): array
+    {
+        return $this->httpPost('crossBorder/stockTaking', $params);
+    }
+
+    /**
+     * 库存类型变动回告.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function stockTransform(array $params): array
+    {
+        return $this->httpPost('crossBorder/stockTransform', $params);
+    }
 }
