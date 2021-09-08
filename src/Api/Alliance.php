@@ -19,4 +19,17 @@ class Alliance extends BaseRequest
     {
         return $this->httpPost('alliance/getOrderList', $params);
     }
+
+    /**
+     * 检索精选联盟商品.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function materialsProductsSearch(array $params): array
+    {
+        return $this->httpPost('alliance/materialsProductsSearch', $params);
+    }
 }

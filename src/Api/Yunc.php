@@ -43,7 +43,7 @@ class Yunc extends BaseRequest
      */
     public function pushCloudWarehouseOutboundOrderToC(array $params): array
     {
-        return $this->httpPost('yunc/pushCloudWarehouseOutboundOrderToC', $params);
+        return $this->httpPost('yunc/createOutboundOrderToC', $params);
     }
 
     /**

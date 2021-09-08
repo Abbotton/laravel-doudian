@@ -59,18 +59,6 @@ class Order extends BaseRequest
         return $this->httpPost('order/addressModify', $params);
     }
 
-    /**
-     * 取消货到付款订单.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function cancel(array $params): array
-    {
-        return $this->httpPost('order/cancel', $params);
-    }
 
     /**
      * 获取服务单列表.
@@ -109,32 +97,6 @@ class Order extends BaseRequest
     public function serviceDetail(array $params): array
     {
         return $this->httpPost('order/serviceDetail', $params);
-    }
-
-    /**
-     * 获取服务请求列表.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function serviceList(array $params): array
-    {
-        return $this->httpPost('order/serviceList', $params);
-    }
-
-    /**
-     * 确认货到付款订单.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function stockUp(array $params): array
-    {
-        return $this->httpPost('order/stockUp', $params);
     }
 
     /**
@@ -267,19 +229,6 @@ class Order extends BaseRequest
     }
 
     /**
-     * 获取订单加密索引串.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws InvalidArgumentException
-     * @throws RequestException
-     */
-    public function getSearchIndex(array $params): array
-    {
-        return $this->httpPost('order/getSearchIndex', $params);
-    }
-
-    /**
      * 批量脱敏接口.
      *
      * @param  array  $params
@@ -355,5 +304,31 @@ class Order extends BaseRequest
     public function invoiceUpload(array $params): array
     {
         return $this->httpPost('order/invoiceUpload', $params);
+    }
+
+    /**
+     * 查保单详情.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function policy(array $params): array
+    {
+        return $this->httpPost('order/policy', $params);
+    }
+
+    /**
+     * 下载账单，生成downloadId.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function downloadSettleItemToShop(array $params): array
+    {
+        return $this->httpPost('order/downloadSettleItemToShop', $params);
     }
 }

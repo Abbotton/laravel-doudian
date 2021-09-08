@@ -43,6 +43,6 @@ class OrderCode extends BaseRequest
      */
     public function batchGetOrderCodeByShop(array $params): array
     {
-        return $this->httpPost('orderCode/orderCode/batchGetOrderCodeByShop', $params);
+        return $this->httpPost('orderCode/batchGetOrderCodeByShop', $params);
     }
 }

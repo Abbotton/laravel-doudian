@@ -16,6 +16,7 @@ use Abbotton\DouDian\Api\Member;
 use Abbotton\DouDian\Api\Order;
 use Abbotton\DouDian\Api\OrderCode;
 use Abbotton\DouDian\Api\Product;
+use Abbotton\DouDian\Api\Recycle;
 use Abbotton\DouDian\Api\Shop;
 use Abbotton\DouDian\Api\Spu;
 use Abbotton\DouDian\Api\Storage;
@@ -32,7 +33,6 @@ use Illuminate\Support\Str;
  * @property AntiSpam $antiSpam
  * @property Bats $bats
  * @property BuyIn $buyIn
- * @property Comment $comment
  * @property Coupons $coupons
  * @property CrossBorder $crossBorder
  * @property Logistics $logistics
@@ -41,10 +41,10 @@ use Illuminate\Support\Str;
  * @property Order $order
  * @property OrderCode $orderCode
  * @property Product $product
+ * @property Recycle $recycle
  * @property Shop $shop
  * @property Storage $storage
  * @property Spu $spu
- * @property Test $test
  * @property WareHouse $wareHouse
  * @property Yunc $yunc
  */

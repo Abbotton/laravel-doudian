@@ -47,71 +47,6 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 商家处理发货后仅退款申请.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function buyerRefund(array $params): array
-    {
-        return $this->httpPost('afterSale/buyerRefund', $params);
-    }
-
-    /**
-     * 商家处理退货申请.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function buyerReturn(array $params): array
-    {
-        return $this->httpPost('afterSale/buyerReturn', $params);
-    }
-
-    /**
-     * 商家确认是否收到退货.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function firmReceive(array $params): array
-    {
-        return $this->httpPost('afterSale/firmReceive', $params);
-    }
-
-    /**
-     * 获取已发货且有售后的订单列表（待下线）.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function orderList(array $params): array
-    {
-        return $this->httpPost('afterSale/orderList', $params);
-    }
-
-    /**
-     * 根据子订单ID查询退款详情.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function refundProcessDetail(array $params): array
-    {
-        return $this->httpPost('afterSale/refundProcessDetail', $params);
-    }
-
-    /**
      * 卖家提交举证信息.
      *
      * @param  array  $params
@@ -121,7 +56,7 @@ class AfterSale extends BaseRequest
      */
     public function submitEvidence(array $params = []): array
     {
-        return $this->httpPost('aftersale/submitEvidence', $params);
+        return $this->httpPost('afterSale/submitEvidence', $params);
     }
 
     /**
@@ -135,45 +70,6 @@ class AfterSale extends BaseRequest
     public function timeExtend(array $params): array
     {
         return $this->httpPost('afterSale/timeExtend', $params);
-    }
-
-    /**
-     * 货到付款订单上传赔付凭证
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function uploadCompensation(array $params): array
-    {
-        return $this->httpPost('afterSale/uploadCompensation', $params);
-    }
-
-    /**
-     * 获取备货中有退款的订单列表（待下线）.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function refundOrderList(array $params): array
-    {
-        return $this->httpPost('refund/orderList', $params);
-    }
-
-    /**
-     * 商家处理备货中退款申请.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function shopRefund(array $params): array
-    {
-        return $this->httpPost('refund/shopRefund', $params);
     }
 
     /**
@@ -265,5 +161,18 @@ class AfterSale extends BaseRequest
     public function cancelSendGoodsSuccess(array $params = []): array
     {
         return $this->httpPost('afterSale/CancelSendGoodsSuccess', $params);
+    }
+
+    /**
+     * 申请物流拦截.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     */
+    public function applyLogisticsIntercept(array $params = []): array
+    {
+        return $this->httpPost('afterSale/applyLogisticsIntercept', $params);
     }
 }

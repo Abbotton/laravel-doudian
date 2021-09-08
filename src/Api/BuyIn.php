@@ -110,4 +110,30 @@ class BuyIn extends BaseRequest
     {
         return $this->httpPost('buyin/applyActivities', $params);
     }
+
+    /**
+     * 创建/修改商品专属推广计划.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function exclusivePlan(array $params): array
+    {
+        return $this->httpPost('buyin/exclusivePlan', $params);
+    }
+
+    /**
+     * 创建/修改普通商品推广计划.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function simplePlan(array $params): array
+    {
+        return $this->httpPost('buyin/simplePlan', $params);
+    }
 }

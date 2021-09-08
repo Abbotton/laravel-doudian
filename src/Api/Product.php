@@ -60,19 +60,6 @@ class Product extends BaseRequest
     }
 
     /**
-     * 编辑商品
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function productDdit(array $params): array
-    {
-        return $this->httpPost('product/edit', $params);
-    }
-
-    /**
      * 设置商品限购.
      *
      * @param array $params
@@ -109,19 +96,6 @@ class Product extends BaseRequest
     public function getCateProperty(array $params): array
     {
         return $this->httpPost('product/getCateProperty', $params);
-    }
-
-    /**
-     * 获取商品列表.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function productList(array $params): array
-    {
-        return $this->httpPost('product/list', $params);
     }
 
     /**
@@ -187,19 +161,6 @@ class Product extends BaseRequest
     public function editPrice(array $params): array
     {
         return $this->httpPost('sku/editPrice', $params);
-    }
-
-    /**
-     * 修改sku对应的供应商编码ID.
-     *
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     */
-    public function skuEditSupplierId(array $params): array
-    {
-        return $this->httpPost('sku/editSupplierId', $params);
     }
 
     /**

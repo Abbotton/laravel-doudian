@@ -69,7 +69,7 @@ class CrossBorder extends BaseRequest
      */
     public function warehouseInOutboundEvent(array $params): array
     {
-        return $this->httpPost('crossBorder/warehouseInOutboundEvent', $params);
+        return $this->httpPost('crossborder/warehouseInOutboundEvent', $params);
     }
 
     /**
@@ -82,7 +82,7 @@ class CrossBorder extends BaseRequest
      */
     public function stockTaking(array $params): array
     {
-        return $this->httpPost('crossBorder/stockTaking', $params);
+        return $this->httpPost('crossborder/stockTaking', $params);
     }
 
     /**
@@ -95,6 +95,19 @@ class CrossBorder extends BaseRequest
      */
     public function stockTransform(array $params): array
     {
-        return $this->httpPost('crossBorder/stockTransform', $params);
+        return $this->httpPost('crossborder/stockTransform', $params);
+    }
+
+    /**
+     * 服务商锁单结果回告.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function OrderInterception(array $params): array
+    {
+        return $this->httpPost('crossborder/OrderInterception', $params);
     }
 }
