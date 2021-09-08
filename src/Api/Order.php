@@ -59,7 +59,6 @@ class Order extends BaseRequest
         return $this->httpPost('order/addressModify', $params);
     }
 
-
     /**
      * 获取服务单列表.
      *
