@@ -30,7 +30,7 @@ class DouDianServiceProvider extends ServiceProvider
         $this->app->singleton('doudian', function ($app, $args) {
             $config = config('doudian');
 
-            return new DouDian($config, $args["shop_id"]);
+            return new DouDian($config, $args['shop_id']);
         });
     }
 }

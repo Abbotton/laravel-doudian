@@ -43,9 +43,9 @@ class BaseRequest
     /**
      * 发起GET请求
      *
-     * @param  string $url
-     * @param  array $params
-     * @param  bool $needSign
+     * @param  string  $url
+     * @param  array  $params
+     * @param  bool  $needSign
      * @return array
      *
      * @throws RequestException
@@ -59,10 +59,10 @@ class BaseRequest
     /**
      * 发起HTTP请求
      *
-     * @param  string $method
-     * @param  string $url
-     * @param  array $params
-     * @param  bool $needSign
+     * @param  string  $method
+     * @param  string  $url
+     * @param  array  $params
+     * @param  bool  $needSign
      * @return array
      *
      * @throws RequestException
@@ -88,8 +88,8 @@ class BaseRequest
     /**
      * 组合请求参数.
      *
-     * @param  string $url
-     * @param  array $params
+     * @param  string  $url
+     * @param  array  $params
      * @return array
      *
      * @throws RequestException
@@ -174,7 +174,7 @@ class BaseRequest
     /**
      * 刷新TOKEN.
      *
-     * @param  string $refreshToken
+     * @param  string  $refreshToken
      * @return string
      *
      * @throws RequestException
@@ -200,9 +200,9 @@ class BaseRequest
     /**
      * 发起POST请求
      *
-     * @param  string $url
-     * @param  array $params
-     * @param  bool $needSign
+     * @param  string  $url
+     * @param  array  $params
+     * @param  bool  $needSign
      * @return array
      *
      * @throws RequestException
