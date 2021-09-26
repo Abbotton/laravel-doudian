@@ -126,6 +126,7 @@ class BaseRequest
      * 获取TOKEN.
      *
      * @return mixed|string
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -147,6 +148,7 @@ class BaseRequest
      * 请求TOKEN.
      *
      * @return string
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */

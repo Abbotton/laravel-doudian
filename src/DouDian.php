@@ -26,6 +26,7 @@ use Illuminate\Support\Str;
 
 /**
  * Class DouDian.
+ *
  * @property AfterSale $afterSale
  * @property Alliance $alliance
  * @property AntiSpam $antiSpam
