@@ -64,6 +64,6 @@ class DouDian
             throw new Exception($class.', Not found', 404);
         }
 
-        return new $class($this->config,$this->shop_id);
+        return new $class($this->config, $this->shop_id);
     }
 }

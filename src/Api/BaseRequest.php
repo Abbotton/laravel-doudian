@@ -26,7 +26,7 @@ class BaseRequest
      */
     private $client;
 
-    public function __construct(array $config,$shop_id)
+    public function __construct(array $config, $shop_id)
     {
         $this->config = $config;
         $this->shop_id = $shop_id;
@@ -43,12 +43,12 @@ class BaseRequest
     /**
      * 发起GET请求
      *
-     * @param string $url
-     * @param array $params
-     * @param bool $needSign
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
+     * @param   string  $url
+     * @param   array   $params
+     * @param   bool    $needSign
+     * @return  array
+     * @throws  RequestException
+     * @throws  InvalidArgumentException
      */
     public function httpGet(string $url, array $params = [], bool $needSign = true): array
     {
@@ -58,13 +58,13 @@ class BaseRequest
     /**
      * 发起HTTP请求
      *
-     * @param string $method
-     * @param string $url
-     * @param array $params
-     * @param bool $needSign
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
+     * @param   string  $method
+     * @param   string  $url
+     * @param   array   $params
+     * @param   bool    $needSign
+     * @return  array
+     * @throws  RequestException
+     * @throws  InvalidArgumentException
      */
     private function request(string $method, string $url, array $params = [], bool $needSign = true): array
     {
@@ -86,11 +86,11 @@ class BaseRequest
     /**
      * 组合请求参数.
      *
-     * @param string $url
-     * @param array $params
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
+     * @param   string  $url
+     * @param   array   $params
+     * @return  array
+     * @throws  RequestException
+     * @throws  InvalidArgumentException
      */
     protected function generateParams(string $url, array $params): array
     {
@@ -155,7 +155,9 @@ class BaseRequest
             'grant_type' => 'authorization_self',
         ];
 
-        if ($this->shop_id) $param['shop_id'] = $this->shop_id;
+        if ($this->shop_id) {
+            $param['shop_id'] = $this->shop_id;
+        }
 
         $response = $this->httpGet('oauth2/access_token', $param, false);
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
@@ -169,10 +171,10 @@ class BaseRequest
     /**
      * 刷新TOKEN.
      *
-     * @param string $refreshToken
-     * @return string
-     * @throws RequestException
-     * @throws InvalidArgumentException
+     * @param   string  $refreshToken
+     * @return  string
+     * @throws  RequestException
+     * @throws  InvalidArgumentException
      */
     private function updateAccessToken(string $refreshToken): string
     {
@@ -194,12 +196,12 @@ class BaseRequest
     /**
      * 发起POST请求
      *
-     * @param string $url
-     * @param array $params
-     * @param bool $needSign
-     * @return array
-     * @throws RequestException
-     * @throws InvalidArgumentException
+     * @param   string  $url
+     * @param   array   $params
+     * @param   bool    $needSign
+     * @return  array
+     * @throws  RequestException
+     * @throws  InvalidArgumentException
      */
     public function httpPost(string $url, array $params = [], bool $needSign = true): array
     {
