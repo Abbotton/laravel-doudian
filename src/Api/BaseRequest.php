@@ -43,12 +43,13 @@ class BaseRequest
     /**
      * 发起GET请求
      *
-     * @param   string  $url
-     * @param   array   $params
-     * @param   bool    $needSign
-     * @return  array
-     * @throws  RequestException
-     * @throws  InvalidArgumentException
+     * @param  string $url
+     * @param  array $params
+     * @param  bool $needSign
+     * @return array
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
      */
     public function httpGet(string $url, array $params = [], bool $needSign = true): array
     {
@@ -58,13 +59,14 @@ class BaseRequest
     /**
      * 发起HTTP请求
      *
-     * @param   string  $method
-     * @param   string  $url
-     * @param   array   $params
-     * @param   bool    $needSign
-     * @return  array
-     * @throws  RequestException
-     * @throws  InvalidArgumentException
+     * @param  string $method
+     * @param  string $url
+     * @param  array $params
+     * @param  bool $needSign
+     * @return array
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
      */
     private function request(string $method, string $url, array $params = [], bool $needSign = true): array
     {
@@ -86,11 +88,12 @@ class BaseRequest
     /**
      * 组合请求参数.
      *
-     * @param   string  $url
-     * @param   array   $params
-     * @return  array
-     * @throws  RequestException
-     * @throws  InvalidArgumentException
+     * @param  string $url
+     * @param  array $params
+     * @return array
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
      */
     protected function generateParams(string $url, array $params): array
     {
@@ -171,10 +174,11 @@ class BaseRequest
     /**
      * 刷新TOKEN.
      *
-     * @param   string  $refreshToken
-     * @return  string
-     * @throws  RequestException
-     * @throws  InvalidArgumentException
+     * @param  string $refreshToken
+     * @return string
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
      */
     private function updateAccessToken(string $refreshToken): string
     {
@@ -196,12 +200,13 @@ class BaseRequest
     /**
      * 发起POST请求
      *
-     * @param   string  $url
-     * @param   array   $params
-     * @param   bool    $needSign
-     * @return  array
-     * @throws  RequestException
-     * @throws  InvalidArgumentException
+     * @param  string $url
+     * @param  array $params
+     * @param  bool $needSign
+     * @return array
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
      */
     public function httpPost(string $url, array $params = [], bool $needSign = true): array
     {
