@@ -27,10 +27,9 @@ class DouDianServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'doudian');
 
         // Register the main class to use with the facade
-        $this->app->singleton('doudian', function () {
+        $this->app->singleton('doudian', function ($app, $args) {
             $config = config('doudian');
-
-            return new DouDian($config);
+            return new DouDian($config,$args["shop_id"]);
         });
     }
 }

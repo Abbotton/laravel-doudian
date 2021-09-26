@@ -14,6 +14,7 @@ class BaseRequest
      * @var array 配置参数
      */
     private $config;
+    private $shop_id;
 
     /**
      * @var string 接口地址
@@ -25,9 +26,10 @@ class BaseRequest
      */
     private $client;
 
-    public function __construct(array $config)
+    public function __construct(array $config,$shop_id)
     {
         $this->config = $config;
+        $this->shop_id = $shop_id;
         if (! isset($config['app_key']) || ! $config['app_key']) {
             throw new \InvalidArgumentException('配置有误, 请填写app_key');
         }
@@ -152,6 +154,8 @@ class BaseRequest
             'app_secret' => $this->config['app_secret'],
             'grant_type' => 'authorization_self',
         ];
+
+        if ($this->shop_id) $param['shop_id'] = $this->shop_id;
 
         $response = $this->httpGet('oauth2/access_token', $param, false);
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
