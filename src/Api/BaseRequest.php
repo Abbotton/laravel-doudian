@@ -128,7 +128,7 @@ class BaseRequest
      */
     private function getAccessToken(): string
     {
-        $oauthToken = Cache::get(self::OAUTH_CACHE_KEY, []);
+        $oauthToken = Cache::get(self::OAUTH_CACHE_KEY.$this->shop_id, []);
         if (! $oauthToken) {
             return $this->requestAccessToken();
         }
@@ -161,7 +161,7 @@ class BaseRequest
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
 
-        Cache::set(self::OAUTH_CACHE_KEY, $response['data']);
+        Cache::set(self::OAUTH_CACHE_KEY.$this->shop_id, $response['data']);
 
         return $response['data']['access_token'];
     }
@@ -186,7 +186,7 @@ class BaseRequest
         $response = $this->httpGet('oauth2/refresh_token', $param, false);
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
 
-        Cache::set(self::OAUTH_CACHE_KEY, $response['data']);
+        Cache::set(self::OAUTH_CACHE_KEY.$this->shop_id, $response['data']);
 
         return $response['data']['access_token'];
     }
