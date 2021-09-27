@@ -17,9 +17,16 @@ php artisan vendor:publish --provider="Abbotton\DouDian\DouDianServiceProvider"
 ```
 3、修改`config/doudian.php`中相关配置。
 ## 使用
+
 ``` php
 $response = app('doudian')->shop->getShopCategory(['cid' => 0]);
 dd($response);
+```
+
+支持多个授权店铺之间切换，默认不传参为最早授权的店铺
+
+```php
+app('doudian',["shop_id"=>"123123"])->order->orderDetail(["shop_order_id"=>'5557097346351159555']);
 ```
 
 ### 测试
