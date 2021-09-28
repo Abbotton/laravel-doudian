@@ -26,6 +26,7 @@ use Illuminate\Support\Str;
 
 /**
  * Class DouDian.
+ *
  * @property AfterSale $afterSale
  * @property Alliance $alliance
  * @property AntiSpam $antiSpam
@@ -49,10 +50,12 @@ use Illuminate\Support\Str;
 class DouDian
 {
     private $config;
+    private $shop_id;
 
-    public function __construct(array $config = [])
+    public function __construct(array $config = [], $shop_id = null)
     {
         $this->config = $config;
+        $this->shop_id = $shop_id;
     }
 
     public function __get($class)
@@ -62,6 +65,6 @@ class DouDian
             throw new Exception($class.', Not found', 404);
         }
 
-        return new $class($this->config);
+        return new $class($this->config, $this->shop_id);
     }
 }

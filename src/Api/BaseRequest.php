@@ -14,6 +14,7 @@ class BaseRequest
      * @var array 配置参数
      */
     private $config;
+    private $shop_id;
 
     /**
      * @var string 接口地址
@@ -25,9 +26,10 @@ class BaseRequest
      */
     private $client;
 
-    public function __construct(array $config)
+    public function __construct(array $config, $shop_id)
     {
         $this->config = $config;
+        $this->shop_id = $shop_id;
         if (! isset($config['app_key']) || ! $config['app_key']) {
             throw new \InvalidArgumentException('配置有误, 请填写app_key');
         }
@@ -41,10 +43,11 @@ class BaseRequest
     /**
      * 发起GET请求
      *
-     * @param string $url
-     * @param array $params
-     * @param bool $needSign
+     * @param  string  $url
+     * @param  array  $params
+     * @param  bool  $needSign
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -56,11 +59,12 @@ class BaseRequest
     /**
      * 发起HTTP请求
      *
-     * @param string $method
-     * @param string $url
-     * @param array $params
-     * @param bool $needSign
+     * @param  string  $method
+     * @param  string  $url
+     * @param  array  $params
+     * @param  bool  $needSign
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -84,9 +88,10 @@ class BaseRequest
     /**
      * 组合请求参数.
      *
-     * @param string $url
-     * @param array $params
+     * @param  string  $url
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -121,12 +126,13 @@ class BaseRequest
      * 获取TOKEN.
      *
      * @return mixed|string
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
     private function getAccessToken(): string
     {
-        $oauthToken = Cache::get(self::OAUTH_CACHE_KEY, []);
+        $oauthToken = Cache::get(self::OAUTH_CACHE_KEY.$this->shop_id, []);
         if (! $oauthToken) {
             return $this->requestAccessToken();
         }
@@ -142,6 +148,7 @@ class BaseRequest
      * 请求TOKEN.
      *
      * @return string
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -153,11 +160,15 @@ class BaseRequest
             'grant_type' => 'authorization_self',
         ];
 
+        if ($this->shop_id) {
+            $param['shop_id'] = $this->shop_id;
+        }
+
         $response = $this->httpGet('oauth2/access_token', $param, false);
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
 
-        Cache::set(self::OAUTH_CACHE_KEY, $response['data']);
+        Cache::set(self::OAUTH_CACHE_KEY.$this->shop_id, $response['data']);
 
         return $response['data']['access_token'];
     }
@@ -165,8 +176,9 @@ class BaseRequest
     /**
      * 刷新TOKEN.
      *
-     * @param string $refreshToken
+     * @param  string  $refreshToken
      * @return string
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -182,7 +194,7 @@ class BaseRequest
         $response = $this->httpGet('oauth2/refresh_token', $param, false);
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
 
-        Cache::set(self::OAUTH_CACHE_KEY, $response['data']);
+        Cache::set(self::OAUTH_CACHE_KEY.$this->shop_id, $response['data']);
 
         return $response['data']['access_token'];
     }
@@ -190,10 +202,11 @@ class BaseRequest
     /**
      * 发起POST请求
      *
-     * @param string $url
-     * @param array $params
-     * @param bool $needSign
+     * @param  string  $url
+     * @param  array  $params
+     * @param  bool  $needSign
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
