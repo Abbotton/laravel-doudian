@@ -10,8 +10,9 @@ class Product extends BaseRequest
     /**
      * 运费模板查询.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -23,8 +24,9 @@ class Product extends BaseRequest
     /**
      * 商品发布新接口.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -36,8 +38,9 @@ class Product extends BaseRequest
     /**
      * 删除商品
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -49,8 +52,9 @@ class Product extends BaseRequest
     /**
      * 获取商品详情.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -62,8 +66,9 @@ class Product extends BaseRequest
     /**
      * 设置商品限购.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -75,8 +80,9 @@ class Product extends BaseRequest
     /**
      * 商品编辑新接口.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -88,8 +94,9 @@ class Product extends BaseRequest
     /**
      * 根据商品分类获取对应的属性列表.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -101,8 +108,9 @@ class Product extends BaseRequest
     /**
      * 商品下架.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -114,8 +122,9 @@ class Product extends BaseRequest
     /**
      * 商品上架.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -127,8 +136,9 @@ class Product extends BaseRequest
     /**
      * 获取商品sku详情.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -140,8 +150,9 @@ class Product extends BaseRequest
     /**
      * 修改sku编码
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -153,8 +164,9 @@ class Product extends BaseRequest
     /**
      * 编辑sku价格
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -166,8 +178,9 @@ class Product extends BaseRequest
     /**
      * 获取商品sku列表.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -179,8 +192,9 @@ class Product extends BaseRequest
     /**
      * 修改sku库存.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -192,8 +206,9 @@ class Product extends BaseRequest
     /**
      * 批量同步库存接口.
      *
-     * @param array $params
+     * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -207,6 +222,7 @@ class Product extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -220,6 +236,7 @@ class Product extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -233,6 +250,7 @@ class Product extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -246,6 +264,7 @@ class Product extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */

@@ -12,6 +12,7 @@ class Alliance extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -25,6 +26,7 @@ class Alliance extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */

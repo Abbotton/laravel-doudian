@@ -12,6 +12,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -25,6 +26,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -38,6 +40,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -51,6 +54,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -64,6 +68,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -77,6 +82,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -90,6 +96,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -103,6 +110,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -116,6 +124,7 @@ class Recycle extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */

@@ -12,6 +12,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -25,6 +26,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -38,6 +40,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -51,6 +54,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -64,6 +68,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -77,6 +82,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -90,6 +96,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -103,6 +110,7 @@ class CrossBorder extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */

@@ -11,6 +11,7 @@ class Shop extends BaseRequest
      * 获取店铺的已授权品牌列表.
      *
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -24,6 +25,7 @@ class Shop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -37,6 +39,7 @@ class Shop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -50,6 +53,7 @@ class Shop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -63,6 +67,7 @@ class Shop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
