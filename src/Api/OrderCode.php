@@ -12,6 +12,7 @@ class OrderCode extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -25,6 +26,7 @@ class OrderCode extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -38,6 +40,7 @@ class OrderCode extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */

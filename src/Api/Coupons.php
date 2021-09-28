@@ -12,6 +12,7 @@ class Coupons extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -25,6 +26,7 @@ class Coupons extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -38,6 +40,7 @@ class Coupons extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -51,6 +54,7 @@ class Coupons extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */

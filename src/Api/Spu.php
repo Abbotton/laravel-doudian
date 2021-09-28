@@ -12,6 +12,7 @@ class Spu extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -25,6 +26,7 @@ class Spu extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -38,6 +40,7 @@ class Spu extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -51,6 +54,7 @@ class Spu extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */

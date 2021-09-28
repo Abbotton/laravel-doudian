@@ -11,6 +11,7 @@ class Iop extends BaseRequest
      * 查询店铺身份.
      *
      * @return array
+     *
      * @throws RequestException
      * @throws InvalidArgumentException
      */
@@ -24,6 +25,7 @@ class Iop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -36,6 +38,7 @@ class Iop extends BaseRequest
      * 电子面单取号.
      *
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -49,6 +52,7 @@ class Iop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -62,6 +66,7 @@ class Iop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -75,6 +80,7 @@ class Iop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
@@ -88,6 +94,7 @@ class Iop extends BaseRequest
      *
      * @param  array  $params
      * @return array
+     *
      * @throws InvalidArgumentException
      * @throws RequestException
      */
