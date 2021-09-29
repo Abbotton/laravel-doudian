@@ -10,11 +10,12 @@ class Product extends BaseRequest
     /**
      * 运费模板查询.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function freightTemplateList(array $params = []): array
     {
@@ -24,11 +25,12 @@ class Product extends BaseRequest
     /**
      * 商品发布新接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function productAddV2(array $params): array
     {
@@ -38,11 +40,12 @@ class Product extends BaseRequest
     /**
      * 删除商品
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function productDel(array $params): array
     {
@@ -52,11 +55,12 @@ class Product extends BaseRequest
     /**
      * 获取商品详情.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function productDetail(array $params): array
     {
@@ -66,11 +70,12 @@ class Product extends BaseRequest
     /**
      * 设置商品限购.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function editBuyerLimit(array $params): array
     {
@@ -80,11 +85,12 @@ class Product extends BaseRequest
     /**
      * 商品编辑新接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function productEditV2(array $params): array
     {
@@ -94,11 +100,12 @@ class Product extends BaseRequest
     /**
      * 根据商品分类获取对应的属性列表.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function getCateProperty(array $params): array
     {
@@ -108,11 +115,12 @@ class Product extends BaseRequest
     /**
      * 商品下架.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function setOffline(array $params): array
     {
@@ -122,11 +130,12 @@ class Product extends BaseRequest
     /**
      * 商品上架.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function setOnline(array $params): array
     {
@@ -136,11 +145,12 @@ class Product extends BaseRequest
     /**
      * 获取商品sku详情.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function skuDetail(array $params): array
     {
@@ -150,11 +160,12 @@ class Product extends BaseRequest
     /**
      * 修改sku编码
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function editCode(array $params): array
     {
@@ -164,11 +175,12 @@ class Product extends BaseRequest
     /**
      * 编辑sku价格
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function editPrice(array $params): array
     {
@@ -178,11 +190,12 @@ class Product extends BaseRequest
     /**
      * 获取商品sku列表.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function skuList(array $params): array
     {
@@ -192,11 +205,12 @@ class Product extends BaseRequest
     /**
      * 修改sku库存.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function syncStock(array $params): array
     {
@@ -206,11 +220,12 @@ class Product extends BaseRequest
     /**
      * 批量同步库存接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function syncStockBatch(array $params): array
     {
@@ -220,11 +235,12 @@ class Product extends BaseRequest
     /**
      * 获取商品列表新版.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function listV2(array $params): array
     {
@@ -234,11 +250,12 @@ class Product extends BaseRequest
     /**
      * 获取商品列表新版.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function opptyProductApply(array $params): array
     {
@@ -248,11 +265,12 @@ class Product extends BaseRequest
     /**
      * 机会品线索触达.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function opptyProductClue(array $params): array
     {
@@ -262,11 +280,12 @@ class Product extends BaseRequest
     /**
      * 机会品提报进度查询.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function opptyProductGetApplyProgress(array $params): array
     {

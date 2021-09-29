@@ -10,10 +10,10 @@ class Shop extends BaseRequest
     /**
      * 获取店铺的已授权品牌列表.
      *
-     * @return array
-     *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function brandList(): array
     {
@@ -23,11 +23,12 @@ class Shop extends BaseRequest
     /**
      * 获取店铺后台供商家发布商品的类目.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function getShopCategory(array $params): array
     {
@@ -37,11 +38,12 @@ class Shop extends BaseRequest
     /**
      * 售后地址列表接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function addressList(array $params): array
     {
@@ -51,11 +53,12 @@ class Shop extends BaseRequest
     /**
      * 店铺创建售后地址接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function addressCreate(array $params): array
     {
@@ -65,11 +68,12 @@ class Shop extends BaseRequest
     /**
      * 店铺创建售后地址接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function addressUpdate(array $params): array
     {

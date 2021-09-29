@@ -10,10 +10,10 @@ class Storage extends BaseRequest
     /**
      * 回告销退单状态.
      *
-     * @return array
-     *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function getOrderList(): array
     {
