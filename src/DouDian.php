@@ -27,25 +27,25 @@ use Illuminate\Support\Str;
 /**
  * Class DouDian.
  *
- * @property AfterSale $afterSale
- * @property Alliance $alliance
- * @property AntiSpam $antiSpam
- * @property Bats $bats
- * @property BuyIn $buyIn
- * @property Coupons $coupons
+ * @property AfterSale   $afterSale
+ * @property Alliance    $alliance
+ * @property AntiSpam    $antiSpam
+ * @property Bats        $bats
+ * @property BuyIn       $buyIn
+ * @property Coupons     $coupons
  * @property CrossBorder $crossBorder
- * @property Logistics $logistics
- * @property Iop $iop
- * @property Member $member
- * @property Order $order
- * @property OrderCode $orderCode
- * @property Product $product
- * @property Recycle $recycle
- * @property Shop $shop
- * @property Storage $storage
- * @property Spu $spu
- * @property WareHouse $wareHouse
- * @property Yunc $yunc
+ * @property Logistics   $logistics
+ * @property Iop         $iop
+ * @property Member      $member
+ * @property Order       $order
+ * @property OrderCode   $orderCode
+ * @property Product     $product
+ * @property Recycle     $recycle
+ * @property Shop        $shop
+ * @property Storage     $storage
+ * @property Spu         $spu
+ * @property WareHouse   $wareHouse
+ * @property Yunc        $yunc
  */
 class DouDian
 {
@@ -60,7 +60,7 @@ class DouDian
     public function __get($class)
     {
         $class = '\\Abbotton\\DouDian\\Api\\'.Str::ucfirst($class);
-        if (! class_exists($class)) {
+        if (!class_exists($class)) {
             throw new Exception($class.', Not found', 404);
         }
 
@@ -70,7 +70,8 @@ class DouDian
     /**
      * 设定店铺ID.
      *
-     * @param  int  $shopId
+     * @param int $shopId
+     *
      * @return $this
      */
     public function setShopId(int $shopId): self

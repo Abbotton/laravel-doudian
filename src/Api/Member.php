@@ -10,11 +10,12 @@ class Member extends BaseRequest
     /**
      * 会员等级更新.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function batchUpdate(array $params): array
     {
@@ -24,11 +25,12 @@ class Member extends BaseRequest
     /**
      * 会员订单列表查询.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function searchList(array $params): array
     {

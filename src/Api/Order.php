@@ -10,11 +10,12 @@ class Order extends BaseRequest
     /**
      * 添加订单备注.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function addOrderRemark(array $params): array
     {
@@ -24,11 +25,12 @@ class Order extends BaseRequest
     /**
      * 设置店铺支持地址变更审核.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function addressAppliedSwitch(array $params): array
     {
@@ -38,11 +40,12 @@ class Order extends BaseRequest
     /**
      * 买家地址变更确认.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function addressConfirm(array $params): array
     {
@@ -52,11 +55,12 @@ class Order extends BaseRequest
     /**
      * 卖家主动修改收货地址
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function addressModify(array $params): array
     {
@@ -66,11 +70,12 @@ class Order extends BaseRequest
     /**
      * 获取服务单列表.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function getServiceList(array $params): array
     {
@@ -80,11 +85,12 @@ class Order extends BaseRequest
     /**
      * 回复服务请求
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function replyService(array $params): array
     {
@@ -94,11 +100,12 @@ class Order extends BaseRequest
     /**
      * 查询商家服务单详情请求
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function serviceDetail(array $params): array
     {
@@ -108,11 +115,12 @@ class Order extends BaseRequest
     /**
      * 未支付订单改货款.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function updateOrderAmount(array $params): array
     {
@@ -122,11 +130,12 @@ class Order extends BaseRequest
     /**
      * 未支付订单邮费修改.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function updatePostAmount(array $params): array
     {
@@ -136,11 +145,12 @@ class Order extends BaseRequest
     /**
      * 查询订单账单明细.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function settle(array $params): array
     {
@@ -150,11 +160,12 @@ class Order extends BaseRequest
     /**
      * 获取运费险保单详情.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function insurance(array $params): array
     {
@@ -164,11 +175,12 @@ class Order extends BaseRequest
     /**
      * 新版查询订单的详细信息.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function orderDetail(array $params): array
     {
@@ -178,11 +190,12 @@ class Order extends BaseRequest
     /**
      * 订单列表查询.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function searchList(array $params): array
     {
@@ -192,11 +205,12 @@ class Order extends BaseRequest
     /**
      * 获取跨境承运单信息.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function getCrossBorderFulfillInfo(array $params): array
     {
@@ -206,10 +220,10 @@ class Order extends BaseRequest
     /**
      * 获取App对于商家订单修改地址的审核权限.
      *
-     * @return array
-     *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function addresSwitchConfig(): array
     {
@@ -219,11 +233,12 @@ class Order extends BaseRequest
     /**
      * 查询账单明细.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function getSettleBillDetail(array $params): array
     {
@@ -233,11 +248,12 @@ class Order extends BaseRequest
     /**
      * 批量加密接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function batchEncrypt(array $params): array
     {
@@ -247,11 +263,12 @@ class Order extends BaseRequest
     /**
      * 批量脱敏接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function batchSensitive(array $params): array
     {
@@ -261,11 +278,12 @@ class Order extends BaseRequest
     /**
      * 批量解密接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function batchDecrypt(array $params): array
     {
@@ -275,11 +293,12 @@ class Order extends BaseRequest
     /**
      * 批量获取索引串接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function batchSearchIndex(array $params): array
     {
@@ -289,11 +308,12 @@ class Order extends BaseRequest
     /**
      * 查看商家开票列表.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function invoiceList(array $params): array
     {
@@ -303,11 +323,12 @@ class Order extends BaseRequest
     /**
      * 订单商品的序列号上传.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function addSerialNumber(array $params): array
     {
@@ -317,11 +338,12 @@ class Order extends BaseRequest
     /**
      * 发票信息回传API.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function invoiceUpload(array $params): array
     {
@@ -331,11 +353,12 @@ class Order extends BaseRequest
     /**
      * 查保单详情.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function policy(array $params): array
     {
@@ -345,11 +368,12 @@ class Order extends BaseRequest
     /**
      * 下载账单，生成downloadId.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function downloadSettleItemToShop(array $params): array
     {

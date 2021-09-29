@@ -10,11 +10,12 @@ class CrossBorder extends BaseRequest
     /**
      * 查询跨境商家资金信息接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function queryBalance(array $params): array
     {
@@ -24,11 +25,12 @@ class CrossBorder extends BaseRequest
     /**
      * 银行信息校验.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function bankAccountVerify(array $params): array
     {
@@ -38,11 +40,12 @@ class CrossBorder extends BaseRequest
     /**
      * 查询跨境订单列表.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function orderList(array $params): array
     {
@@ -52,11 +55,12 @@ class CrossBorder extends BaseRequest
     /**
      * 商家接单.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function orderConfirm(array $params): array
     {
@@ -66,11 +70,12 @@ class CrossBorder extends BaseRequest
     /**
      * 入库和提货出库回告.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function warehouseInOutboundEvent(array $params): array
     {
@@ -80,11 +85,12 @@ class CrossBorder extends BaseRequest
     /**
      * 库存盘点回告.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function stockTaking(array $params): array
     {
@@ -94,11 +100,12 @@ class CrossBorder extends BaseRequest
     /**
      * 库存类型变动回告.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function stockTransform(array $params): array
     {
@@ -108,11 +115,12 @@ class CrossBorder extends BaseRequest
     /**
      * 服务商锁单结果回告.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws InvalidArgumentException
      * @throws RequestException
+     *
+     * @return array
      */
     public function OrderInterception(array $params): array
     {

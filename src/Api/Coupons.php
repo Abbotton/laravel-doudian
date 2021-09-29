@@ -10,11 +10,12 @@ class Coupons extends BaseRequest
     /**
      * 卡券取消核销接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function cancelVerify(array $params): array
     {
@@ -24,11 +25,12 @@ class Coupons extends BaseRequest
     /**
      * 卡券废弃接口.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function abandon(array $params): array
     {
@@ -38,11 +40,12 @@ class Coupons extends BaseRequest
     /**
      * 卡券同步.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function syncV2(array $params): array
     {
@@ -52,11 +55,12 @@ class Coupons extends BaseRequest
     /**
      * 卡券核销接口V2版本.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function verifyV2(array $params): array
     {

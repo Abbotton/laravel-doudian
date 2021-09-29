@@ -30,11 +30,11 @@ class BaseRequest
     {
         $this->config = $config;
         $this->shop_id = $shop_id;
-        if (! isset($config['app_key']) || ! $config['app_key']) {
+        if (!isset($config['app_key']) || !$config['app_key']) {
             throw new \InvalidArgumentException('配置有误, 请填写app_key');
         }
 
-        if (! isset($config['app_secret']) || ! $config['app_secret']) {
+        if (!isset($config['app_secret']) || !$config['app_secret']) {
             throw new \InvalidArgumentException('配置有误, 请填写app_secret');
         }
         $this->client = new Client();
@@ -43,13 +43,14 @@ class BaseRequest
     /**
      * 发起GET请求
      *
-     * @param  string  $url
-     * @param  array  $params
-     * @param  bool  $needSign
-     * @return array
+     * @param string $url
+     * @param array  $params
+     * @param bool   $needSign
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function httpGet(string $url, array $params = [], bool $needSign = true): array
     {
@@ -59,14 +60,15 @@ class BaseRequest
     /**
      * 发起HTTP请求
      *
-     * @param  string  $method
-     * @param  string  $url
-     * @param  array  $params
-     * @param  bool  $needSign
-     * @return array
+     * @param string $method
+     * @param string $url
+     * @param array  $params
+     * @param bool   $needSign
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     private function request(string $method, string $url, array $params = [], bool $needSign = true): array
     {
@@ -88,22 +90,23 @@ class BaseRequest
     /**
      * 组合请求参数.
      *
-     * @param  string  $url
-     * @param  array  $params
-     * @return array
+     * @param string $url
+     * @param array  $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     protected function generateParams(string $url, array $params): array
     {
         $url = str_replace('/', '.', $url);
         $accessToken = $this->getAccessToken();
         $public = [
-            'app_key' => $this->config['app_key'],
-            'timestamp' => date('Y-m-d H:i:s'),
-            'v' => '2',
-            'method' => $url,
+            'app_key'      => $this->config['app_key'],
+            'timestamp'    => date('Y-m-d H:i:s'),
+            'v'            => '2',
+            'method'       => $url,
             'access_token' => $accessToken,
         ];
 
@@ -114,10 +117,11 @@ class BaseRequest
         $md5_str = $this->config['app_secret'].$str.$this->config['app_secret'];
         $sign = md5($md5_str);
 
-        return array_merge($public,
+        return array_merge(
+            $public,
             [
                 'param_json' => $param_json,
-                'sign' => $sign,
+                'sign'       => $sign,
             ]
         );
     }
@@ -125,15 +129,15 @@ class BaseRequest
     /**
      * 获取TOKEN.
      *
-     * @return mixed|string
-     *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return mixed|string
      */
     private function getAccessToken(): string
     {
         $oauthToken = Cache::get(self::OAUTH_CACHE_KEY.$this->shop_id, []);
-        if (! $oauthToken) {
+        if (!$oauthToken) {
             return $this->requestAccessToken();
         }
 
@@ -147,15 +151,15 @@ class BaseRequest
     /**
      * 请求TOKEN.
      *
-     * @return string
-     *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return string
      */
     private function requestAccessToken(): string
     {
         $param = [
-            'app_id' => $this->config['app_key'],
+            'app_id'     => $this->config['app_key'],
             'app_secret' => $this->config['app_secret'],
             'grant_type' => 'authorization_self',
         ];
@@ -176,18 +180,19 @@ class BaseRequest
     /**
      * 刷新TOKEN.
      *
-     * @param  string  $refreshToken
-     * @return string
+     * @param string $refreshToken
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return string
      */
     private function updateAccessToken(string $refreshToken): string
     {
         $param = [
-            'app_id' => $this->config['app_key'],
-            'app_secret' => $this->config['app_secret'],
-            'grant_type' => 'refresh_token',
+            'app_id'        => $this->config['app_key'],
+            'app_secret'    => $this->config['app_secret'],
+            'grant_type'    => 'refresh_token',
             'refresh_token' => $refreshToken,
         ];
 
@@ -202,13 +207,14 @@ class BaseRequest
     /**
      * 发起POST请求
      *
-     * @param  string  $url
-     * @param  array  $params
-     * @param  bool  $needSign
-     * @return array
+     * @param string $url
+     * @param array  $params
+     * @param bool   $needSign
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function httpPost(string $url, array $params = [], bool $needSign = true): array
     {

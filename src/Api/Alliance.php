@@ -10,11 +10,12 @@ class Alliance extends BaseRequest
     /**
      * 查询联盟订单明细.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function getOrderList(array $params): array
     {
@@ -24,11 +25,12 @@ class Alliance extends BaseRequest
     /**
      * 检索精选联盟商品.
      *
-     * @param  array  $params
-     * @return array
+     * @param array $params
      *
      * @throws RequestException
      * @throws InvalidArgumentException
+     *
+     * @return array
      */
     public function materialsProductsSearch(array $params): array
     {
