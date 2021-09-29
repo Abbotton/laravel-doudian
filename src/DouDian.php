@@ -60,7 +60,7 @@ class DouDian
     public function __get($class)
     {
         $class = '\\Abbotton\\DouDian\\Api\\'.Str::ucfirst($class);
-        if (! class_exists($class)) {
+        if (!class_exists($class)) {
             throw new Exception($class.', Not found', 404);
         }
 
