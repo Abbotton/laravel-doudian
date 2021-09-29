@@ -25,8 +25,8 @@ dd($response);
 
 支持多个授权店铺之间切换，默认不传参为最早授权的店铺
 
-```php
-app('doudian',["shop_id"=>"123123"])->order->orderDetail(["shop_order_id"=>'5557097346351159555']);
+``` php
+app('doudian')->setShopId($shopId)->order->orderDetail(["shop_order_id"=>'5557097346351159555']);
 ```
 
 ### 测试

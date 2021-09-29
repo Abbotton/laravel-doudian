@@ -50,12 +50,11 @@ use Illuminate\Support\Str;
 class DouDian
 {
     private $config;
-    private $shop_id;
+    private $shop_id = null;
 
-    public function __construct(array $config = [], $shop_id = null)
+    public function __construct(array $config = [])
     {
         $this->config = $config;
-        $this->shop_id = $shop_id;
     }
 
     public function __get($class)
@@ -66,5 +65,28 @@ class DouDian
         }
 
         return new $class($this->config, $this->shop_id);
+    }
+
+    /**
+     * 设定店铺ID.
+     *
+     * @param  int  $shopId
+     * @return $this
+     */
+    public function setShopId(int $shopId): self
+    {
+        $this->shop_id = $shopId;
+
+        return $this;
+    }
+
+    /**
+     * 获取店铺ID.
+     *
+     * @return mixed|null
+     */
+    public function getShopId()
+    {
+        return $this->shop_id;
     }
 }

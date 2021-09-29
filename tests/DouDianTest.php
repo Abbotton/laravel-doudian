@@ -74,4 +74,15 @@ class DouDianTest extends TestCase
             }
         }
     }
+
+    public function test_can_set_shop_id()
+    {
+        $app = new DouDian($this->getConfig());
+
+        $this->assertNull($app->getShopId());
+
+        $app->setShopId(1);
+
+        $this->assertEquals(1, $app->getShopId());
+    }
 }
