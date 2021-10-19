@@ -30,11 +30,11 @@ class BaseRequest
     {
         $this->config = $config;
         $this->shop_id = $shop_id;
-        if (!isset($config['app_key']) || !$config['app_key']) {
+        if (! isset($config['app_key']) || ! $config['app_key']) {
             throw new \InvalidArgumentException('配置有误, 请填写app_key');
         }
 
-        if (!isset($config['app_secret']) || !$config['app_secret']) {
+        if (! isset($config['app_secret']) || ! $config['app_secret']) {
             throw new \InvalidArgumentException('配置有误, 请填写app_secret');
         }
         $this->client = new Client();
@@ -103,10 +103,10 @@ class BaseRequest
         $url = str_replace('/', '.', $url);
         $accessToken = $this->getAccessToken();
         $public = [
-            'app_key'      => $this->config['app_key'],
-            'timestamp'    => date('Y-m-d H:i:s'),
-            'v'            => '2',
-            'method'       => $url,
+            'app_key' => $this->config['app_key'],
+            'timestamp' => date('Y-m-d H:i:s'),
+            'v' => '2',
+            'method' => $url,
             'access_token' => $accessToken,
         ];
 
@@ -121,7 +121,7 @@ class BaseRequest
             $public,
             [
                 'param_json' => $param_json,
-                'sign'       => $sign,
+                'sign' => $sign,
             ]
         );
     }
@@ -137,7 +137,7 @@ class BaseRequest
     private function getAccessToken(): string
     {
         $oauthToken = Cache::get(self::OAUTH_CACHE_KEY.$this->shop_id, []);
-        if (!$oauthToken) {
+        if (! $oauthToken) {
             return $this->requestAccessToken();
         }
 
@@ -159,7 +159,7 @@ class BaseRequest
     private function requestAccessToken(): string
     {
         $param = [
-            'app_id'     => $this->config['app_key'],
+            'app_id' => $this->config['app_key'],
             'app_secret' => $this->config['app_secret'],
             'grant_type' => 'authorization_self',
         ];
@@ -190,14 +190,15 @@ class BaseRequest
     private function updateAccessToken(string $refreshToken): string
     {
         $param = [
-            'app_id'        => $this->config['app_key'],
-            'app_secret'    => $this->config['app_secret'],
-            'grant_type'    => 'refresh_token',
+            'app_id' => $this->config['app_key'],
+            'app_secret' => $this->config['app_secret'],
+            'grant_type' => 'refresh_token',
             'refresh_token' => $refreshToken,
         ];
 
         $response = $this->httpGet('oauth2/refresh_token', $param, false);
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
+        $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
 
         Cache::set(self::OAUTH_CACHE_KEY.$this->shop_id, $response['data']);
 
