@@ -11,6 +11,7 @@ use Abbotton\DouDian\Api\Coupons;
 use Abbotton\DouDian\Api\CrossBorder;
 use Abbotton\DouDian\Api\Iop;
 use Abbotton\DouDian\Api\Logistics;
+use Abbotton\DouDian\Api\Material;
 use Abbotton\DouDian\Api\Member;
 use Abbotton\DouDian\Api\Order;
 use Abbotton\DouDian\Api\OrderCode;
@@ -36,6 +37,7 @@ use Illuminate\Support\Str;
  * @property CrossBorder $crossBorder
  * @property Logistics   $logistics
  * @property Iop         $iop
+ * @property Material    $material
  * @property Member      $member
  * @property Order       $order
  * @property OrderCode   $orderCode

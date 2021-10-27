@@ -291,4 +291,82 @@ class Product extends BaseRequest
     {
         return $this->httpPost('opptyProduct/getApplyProgress', $params);
     }
+
+    /**
+     * 商品每日诊断任务查询API.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function qualityTask(array $params): array
+    {
+        return $this->httpPost('product/qualityTask', $params);
+    }
+
+    /**
+     * 店铺商品质量查询API.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function qualityList(array $params): array
+    {
+        return $this->httpPost('product/qualityList', $params);
+    }
+
+    /**
+     * 商品信息质量分查询API.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function qualityDetail(array $params): array
+    {
+        return $this->httpPost('product/qualityDetail', $params);
+    }
+
+    /**
+     * 根据商品分类获取对应的属性列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getCatePropertyV2(array $params): array
+    {
+        return $this->httpPost('product/getCatePropertyV2', $params);
+    }
+
+    /**
+     * 获取类目下需要填写的资质列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function qualificationConfig(array $params): array
+    {
+        return $this->httpPost('product/qualificationConfig', $params);
+    }
+
+    /**
+     * 根据类目遍历品牌.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function brandList(array $params): array
+    {
+        return $this->httpPost('brand/list', $params);
+    }
 }

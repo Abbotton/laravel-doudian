@@ -242,4 +242,30 @@ class Logistics extends BaseRequest
     {
         return $this->httpPost('logistics/getCustomTemplateList', $params);
     }
+
+    /**
+     * 获取商家所有模版信息.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function templateList(array $params): array
+    {
+        return $this->httpPost('logistics/templateList', $params);
+    }
+
+    /**
+     * 获取面单信息.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function waybillApply(array $params): array
+    {
+        return $this->httpPost('logistics/waybillApply', $params);
+    }
 }

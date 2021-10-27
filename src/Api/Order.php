@@ -239,6 +239,7 @@ class Order extends BaseRequest
      * @throws RequestException
      *
      * @return array
+     * @deprecated
      */
     public function getSettleBillDetail(array $params): array
     {
@@ -378,5 +379,35 @@ class Order extends BaseRequest
     public function downloadSettleItemToShop(array $params): array
     {
         return $this->httpPost('order/downloadSettleItemToShop', $params);
+    }
+
+    /**
+     * 查询账单明细V2.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function getSettleBillDetailV2(array $params): array
+    {
+        return $this->httpPost('order/getSettleBillDetailV2', $params);
+    }
+
+    /**
+     * 查看是否下载成功并返回下载地址.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function downloadToShop(array $params): array
+    {
+        return $this->httpPost('order/downloadToShop', $params);
     }
 }

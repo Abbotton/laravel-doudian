@@ -126,4 +126,19 @@ class CrossBorder extends BaseRequest
     {
         return $this->httpPost('crossborder/OrderInterception', $params);
     }
+
+    /**
+     * 运单信息回告.
+     *
+     * @param array $params
+     *
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     *
+     * @return array
+     */
+    public function takingLogisticsInfo(array $params): array
+    {
+        return $this->httpPost('crossborder/takingLogisticsInfo', $params);
+    }
 }

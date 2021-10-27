@@ -46,6 +46,7 @@ class Yunc extends BaseRequest
      * @throws InvalidArgumentException
      *
      * @return array
+     * @deprecated
      */
     public function pushCloudWarehouseOutboundOrderToC(array $params): array
     {
@@ -136,6 +137,7 @@ class Yunc extends BaseRequest
      * @throws InvalidArgumentException
      *
      * @return array
+     * @deprecated
      */
     public function cancelOutboundOrderToC(array $params): array
     {
@@ -230,5 +232,20 @@ class Yunc extends BaseRequest
     public function createOutboundOrderToB(array $params): array
     {
         return $this->httpPost('yunc/createOutboundOrderToB', $params);
+    }
+
+    /**
+     * 仓储系统回传发货信息.
+     *
+     * @param array $params
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     *
+     * @return array
+     */
+    public function deliveryInfoNotify(array $params): array
+    {
+        return $this->httpPost('wms/deliveryInfoNotify', $params);
     }
 }

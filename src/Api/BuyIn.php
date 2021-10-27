@@ -156,4 +156,19 @@ class BuyIn extends BaseRequest
     {
         return $this->httpPost('buyin/simplePlan', $params);
     }
+
+    /**
+     * 机构查询达人直播间分销订单.
+     *
+     * @param array $params
+     *
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     *
+     * @return array
+     */
+    public function instituteOrderAds(array $params): array
+    {
+        return $this->httpPost('buyin/instituteOrderAds', $params);
+    }
 }
