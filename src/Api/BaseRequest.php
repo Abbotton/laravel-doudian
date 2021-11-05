@@ -137,7 +137,7 @@ class BaseRequest
     private function getAccessToken(): string
     {
         $oauthToken = Cache::get(self::OAUTH_CACHE_KEY.$this->shop_id, []);
-        if (! $oauthToken || !$oauthToken['refresh_token']) {
+        if (! $oauthToken || ! $oauthToken['refresh_token']) {
             return $this->requestAccessToken();
         }
 
@@ -169,7 +169,7 @@ class BaseRequest
         }
 
         $response = $this->httpGet('oauth2/access_token', $param, false);
-        if(!$response || $response['code'] > 10000){
+        if (! $response || $response['code'] > 10000) {
             trigger_error("oauth2/access_token接口异常[{$response['code']}]");
         }
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
@@ -200,7 +200,7 @@ class BaseRequest
         ];
 
         $response = $this->httpGet('oauth2/refresh_token', $param, false);
-        if(!$response || $response['code'] > 10000){
+        if (! $response || $response['code'] > 10000) {
             trigger_error("oauth2/access_token接口异常[{$response['code']}]");
         }
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
