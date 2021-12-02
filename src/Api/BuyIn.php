@@ -171,4 +171,186 @@ class BuyIn extends BaseRequest
     {
         return $this->httpPost('buyin/instituteOrderAds', $params);
     }
+
+    /**
+     * 商品状态查询.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function materialsProductStatus(array $params): array
+    {
+        return $this->httpPost('buyin/materialsProductStatus', $params);
+    }
+
+    /**
+     * 查询机构联盟订单.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function queryInstituteOrders(array $params): array
+    {
+        return $this->httpPost('buyin/queryInstituteOrders', $params);
+    }
+
+    /**
+     * 达人PID创建.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolPidCreate(array $params): array
+    {
+        return $this->httpPost('buyin/kolPidCreate', $params);
+    }
+
+    /**
+     * 达人PID查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolPidList(array $params): array
+    {
+        return $this->httpPost('buyin/kolPidList', $params);
+    }
+
+    /**
+     * 达人PID 编辑.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolPidEdit(array $params): array
+    {
+        return $this->httpPost('buyin/kolPidEdit', $params);
+    }
+
+    /**
+     * 达人PID删除.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolPidDel(array $params): array
+    {
+        return $this->httpPost('buyin/kolPidDel', $params);
+    }
+
+    /**
+     * 商品分销转链.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolProductShare(array $params): array
+    {
+        return $this->httpPost('buyin/kolProductShare', $params);
+    }
+
+    /**
+     * 机构PID创建.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function institutePidCreate(array $params): array
+    {
+        return $this->httpPost('buyin/institutePidCreate', $params);
+    }
+
+    /**
+     * 机构PID 编辑.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function institutePidEdit(array $params): array
+    {
+        return $this->httpPost('buyin/institutePidEdit', $params);
+    }
+
+    /**
+     * 机构PID删除.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function institutePidDel(array $params): array
+    {
+        return $this->httpPost('buyin/institutePidDel', $params);
+    }
+
+    /**
+     * 直播间分销物料查询.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function liveShareMaterial(array $params): array
+    {
+        return $this->httpPost('buyin/liveShareMaterial', $params);
+    }
+
+    /**
+     * 机构获取达人直播间分享链接.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instituteLiveShare(array $params): array
+    {
+        return $this->httpPost('buyin/instituteLiveShare', $params);
+    }
+
+    /**
+     * 机构PID查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function institutePidList(array $params): array
+    {
+        return $this->httpPost('buyin/institutePidList', $params);
+    }
+
+    /**
+     * 查询达人直播间分销订单.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolOrderAds(array $params): array
+    {
+        return $this->httpPost('buyin/kolOrderAds', $params);
+    }
 }

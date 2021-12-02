@@ -36,4 +36,19 @@ class Member extends BaseRequest
     {
         return $this->httpPost('member/searchList', $params);
     }
+
+    /**
+     * 获取商家推广链接接口.
+     *
+     * @param array $params
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     *
+     * @return array
+     */
+    public function getShopShortLink(array $params): array
+    {
+        return $this->httpPost('member/getShopShortLink', $params);
+    }
 }

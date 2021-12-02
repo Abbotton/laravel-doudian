@@ -6,9 +6,11 @@ use Abbotton\DouDian\Api\AfterSale;
 use Abbotton\DouDian\Api\Alliance;
 use Abbotton\DouDian\Api\AntiSpam;
 use Abbotton\DouDian\Api\Bats;
+use Abbotton\DouDian\Api\Brand;
 use Abbotton\DouDian\Api\BuyIn;
 use Abbotton\DouDian\Api\Coupons;
 use Abbotton\DouDian\Api\CrossBorder;
+use Abbotton\DouDian\Api\DutyFree;
 use Abbotton\DouDian\Api\Iop;
 use Abbotton\DouDian\Api\Logistics;
 use Abbotton\DouDian\Api\Material;
@@ -20,6 +22,7 @@ use Abbotton\DouDian\Api\Recycle;
 use Abbotton\DouDian\Api\Shop;
 use Abbotton\DouDian\Api\Spu;
 use Abbotton\DouDian\Api\Storage;
+use Abbotton\DouDian\Api\Token;
 use Abbotton\DouDian\Api\WareHouse;
 use Abbotton\DouDian\Api\Yunc;
 use Exception;
@@ -32,9 +35,11 @@ use Illuminate\Support\Str;
  * @property Alliance    $alliance
  * @property AntiSpam    $antiSpam
  * @property Bats        $bats
+ * @property Brand       $brand
  * @property BuyIn       $buyIn
  * @property Coupons     $coupons
  * @property CrossBorder $crossBorder
+ * @property DutyFree    $dutyFree
  * @property Logistics   $logistics
  * @property Iop         $iop
  * @property Material    $material
@@ -46,6 +51,7 @@ use Illuminate\Support\Str;
  * @property Shop        $shop
  * @property Storage     $storage
  * @property Spu         $spu
+ * @property Token       $token
  * @property WareHouse   $wareHouse
  * @property Yunc        $yunc
  */

@@ -36,4 +36,95 @@ class Alliance extends BaseRequest
     {
         return $this->httpPost('alliance/materialsProductsSearch', $params);
     }
+
+    /**
+     * 团长活动创建/编辑接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function colonelActivityCreateOrUpdate(array $params): array
+    {
+        return $this->httpPost('alliance/colonelActivityCreateOrUpdate', $params);
+    }
+
+    /**
+     * 创建活动时候可选择的类目接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function activityProductCategoryList(array $params): array
+    {
+        return $this->httpPost('alliance/activityProductCategoryList', $params);
+    }
+
+    /**
+     * 团长活动查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instituteColonelActivityList(array $params): array
+    {
+        return $this->httpPost('alliance/instituteColonelActivityList', $params);
+    }
+
+    /**
+     * 专属团长活动删除接口（下线+删除）.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instituteColonelActivityOperate(array $params): array
+    {
+        return $this->httpPost('alliance/instituteColonelActivityOperate', $params);
+    }
+
+    /**
+     * 活动商品查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function colonelActivityProduct(array $params): array
+    {
+        return $this->httpPost('alliance/colonelActivityProduct', $params);
+    }
+
+    /**
+     * 专属团长活动商品审核接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function colonelActivityProductAudit(array $params): array
+    {
+        return $this->httpPost('alliance/colonelActivityProductAudit', $params);
+    }
+
+    /**
+     * 专属团长活动商品延时接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function colonelActivityProductExtension(array $params): array
+    {
+        return $this->httpPost('alliance/colonelActivityProductExtension', $params);
+    }
 }

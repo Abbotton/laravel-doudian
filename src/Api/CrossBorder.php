@@ -53,21 +53,6 @@ class CrossBorder extends BaseRequest
     }
 
     /**
-     * 商家接单.
-     *
-     * @param array $params
-     *
-     * @throws InvalidArgumentException
-     * @throws RequestException
-     *
-     * @return array
-     */
-    public function orderConfirm(array $params): array
-    {
-        return $this->httpPost('dutyFree/orderConfirm', $params);
-    }
-
-    /**
      * 入库和提货出库回告.
      *
      * @param array $params

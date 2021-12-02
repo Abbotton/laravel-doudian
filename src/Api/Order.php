@@ -231,22 +231,6 @@ class Order extends BaseRequest
     }
 
     /**
-     * 查询账单明细.
-     *
-     * @param array $params
-     *
-     * @throws InvalidArgumentException
-     * @throws RequestException
-     *
-     * @return array
-     * @deprecated
-     */
-    public function getSettleBillDetail(array $params): array
-    {
-        return $this->httpPost('order/getSettleBillDetail', $params);
-    }
-
-    /**
      * 批量加密接口.
      *
      * @param array $params
@@ -409,5 +393,65 @@ class Order extends BaseRequest
     public function downloadToShop(array $params): array
     {
         return $this->httpPost('order/downloadToShop', $params);
+    }
+
+    /**
+     * 资金流水文件.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function getShopAccountItemFile(array $params): array
+    {
+        return $this->httpPost('order/getShopAccountItemFile', $params);
+    }
+
+    /**
+     * 下载资金流水明细文件.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function downloadShopAccountItemFile(array $params): array
+    {
+        return $this->httpPost('order/downloadShopAccountItemFile', $params);
+    }
+
+    /**
+     * 资金流水明细下载请求.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function downloadShopAccountItem(array $params): array
+    {
+        return $this->httpPost('order/downloadShopAccountItem', $params);
+    }
+
+    /**
+     * 资金流水明细接口.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function getShopAccountItem(array $params): array
+    {
+        return $this->httpPost('order/getShopAccountItem', $params);
     }
 }

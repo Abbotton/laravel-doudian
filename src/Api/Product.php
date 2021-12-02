@@ -356,17 +356,4 @@ class Product extends BaseRequest
     {
         return $this->httpPost('product/qualificationConfig', $params);
     }
-
-    /**
-     * 根据类目遍历品牌.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws InvalidArgumentException
-     * @throws RequestException
-     */
-    public function brandList(array $params): array
-    {
-        return $this->httpPost('brand/list', $params);
-    }
 }

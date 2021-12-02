@@ -38,22 +38,6 @@ class Yunc extends BaseRequest
     }
 
     /**
-     * 创建出库单ToC.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     * @deprecated
-     */
-    public function pushCloudWarehouseOutboundOrderToC(array $params): array
-    {
-        return $this->httpPost('yunc/createOutboundOrderToC', $params);
-    }
-
-    /**
      * wms入库单回告.
      *
      * @param array $params
@@ -126,22 +110,6 @@ class Yunc extends BaseRequest
     public function cloudCancelOutboundOrder(array $params): array
     {
         return $this->httpPost('yunc/cloudCancelOutboundOrder', $params);
-    }
-
-    /**
-     * toC场景取消出库单.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     * @deprecated
-     */
-    public function cancelOutboundOrderToC(array $params): array
-    {
-        return $this->httpPost('yunc/cancelOutboundOrderToC', $params);
     }
 
     /**

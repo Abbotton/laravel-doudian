@@ -66,4 +66,49 @@ class Coupons extends BaseRequest
     {
         return $this->httpPost('coupons/verifyV2', $params);
     }
+
+    /**
+     * 卡券核销接口.
+     *
+     * @param array $params
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     *
+     * @return array
+     */
+    public function verify(array $params): array
+    {
+        return $this->httpPost('coupons/verify', $params);
+    }
+
+    /**
+     * 卡券核销次数更新.
+     *
+     * @param array $params
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     *
+     * @return array
+     */
+    public function certVerifyUpdate(array $params): array
+    {
+        return $this->httpPost('coupons/certVerifyUpdate', $params);
+    }
+
+    /**
+     * 三方卡券列表查询.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     *
+     * @throws RequestException
+     */
+    public function list(array $params): array
+    {
+        return $this->httpPost('coupons/list', $params);
+    }
 }

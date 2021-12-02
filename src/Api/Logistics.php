@@ -268,4 +268,17 @@ class Logistics extends BaseRequest
     {
         return $this->httpPost('logistics/waybillApply', $params);
     }
+
+    /**
+     * 追加子母件.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function appendSubOrder(array $params): array
+    {
+        return $this->httpPost('logistics/appendSubOrder', $params);
+    }
 }
