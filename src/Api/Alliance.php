@@ -127,4 +127,17 @@ class Alliance extends BaseRequest
     {
         return $this->httpPost('alliance/colonelActivityProductExtension', $params);
     }
+
+    /**
+     * 类目查询.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function materialsProductCategory(array $params): array
+    {
+        return $this->httpPost('alliance/materialsProductCategory', $params);
+    }
 }

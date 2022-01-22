@@ -126,4 +126,49 @@ class CrossBorder extends BaseRequest
     {
         return $this->httpPost('crossborder/takingLogisticsInfo', $params);
     }
+
+    /**
+     * 服务商回传仓储.
+     *
+     * @param array $params
+     *
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     *
+     * @return array
+     */
+    public function orderOperate(array $params): array
+    {
+        return $this->httpPost('crossBorder/orderOperate', $params);
+    }
+
+    /**
+     * 服务商回告清关状态.
+     *
+     * @param array $params
+     *
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     *
+     * @return array
+     */
+    public function orderCustomClearance(array $params): array
+    {
+        return $this->httpPost('crossborder/orderCustomClearance', $params);
+    }
+
+    /**
+     * 服务商回传国际干线作业节点.
+     *
+     * @param array $params
+     *
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     *
+     * @return array
+     */
+    public function orderLogisticsTrace(array $params): array
+    {
+        return $this->httpPost('crossborder/orderLogisticsTrace', $params);
+    }
 }

@@ -186,4 +186,19 @@ class WareHouse extends BaseRequest
     {
         return $this->httpPost('warehouse/adjustInventory', $params);
     }
+
+    /**
+     * 商家发货时效配置推荐.
+     *
+     * @param array $params
+     *
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     *
+     * @return array
+     */
+    public function deliveryList(array $params): array
+    {
+        return $this->httpPost('promise/deliveryList', $params);
+    }
 }

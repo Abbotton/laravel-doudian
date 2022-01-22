@@ -214,4 +214,30 @@ class Material extends BaseRequest
     {
         return $this->httpPost('material/getFolderInfo', $params);
     }
+
+    /**
+     * 批量上传视频到素材中心.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function batchUploadVideoAsync(array $params): array
+    {
+        return $this->httpPost('material/batchUploadVideoAsync', $params);
+    }
+
+    /**
+     * 批量上传图片到素材中心.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function batchUploadImageSync(array $params): array
+    {
+        return $this->httpPost('material/batchUploadImageSync', $params);
+    }
 }

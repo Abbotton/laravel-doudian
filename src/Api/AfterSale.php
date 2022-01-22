@@ -201,4 +201,19 @@ class AfterSale extends BaseRequest
     {
         return $this->httpPost('afterSale/applyLogisticsIntercept', $params);
     }
+
+    /**
+     * 售后审核处理原因列表查询接口.
+     *
+     * @param array $params
+     *
+     * @throws RequestException
+     * @throws InvalidArgumentException
+     *
+     * @return array
+     */
+    public function rejectReasonCodeList(array $params = []): array
+    {
+        return $this->httpPost('afterSale/rejectReasonCodeList', $params);
+    }
 }

@@ -353,4 +353,108 @@ class BuyIn extends BaseRequest
     {
         return $this->httpPost('buyin/kolOrderAds', $params);
     }
+
+    /**
+     * 查询机构下团长活动特殊申请.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function specialApplyList(array $params): array
+    {
+        return $this->httpPost('buyin/colonel/specialApplyList', $params);
+    }
+
+    /**
+     * 团长活动特殊申请审核.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function specialApplyDeal(array $params): array
+    {
+        return $this->httpPost('buyin/colonel/specialApplyDeal', $params);
+    }
+
+    /**
+     * 查询达人视角商品详情.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolMaterialsProductsDetails(array $params): array
+    {
+        return $this->httpPost('buyin/kolMaterialsProductsDetails', $params);
+    }
+
+    /**
+     * 查询机构联盟MCN机构订单.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instituteOrderMCN(array $params): array
+    {
+        return $this->httpPost('buyin/instituteOrderMCN', $params);
+    }
+
+    /**
+     * 机构查询团长订单.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instituteOrderColonel(array $params): array
+    {
+        return $this->httpPost('buyin/instituteOrderColonel', $params);
+    }
+
+    /**
+     * 获取分销商品列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getProductShareMaterial(array $params): array
+    {
+        return $this->httpPost('buyin/getProductShareMaterial', $params);
+    }
+
+    /**
+     * 店铺会员绑定渠道关系创建.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function shopPidMemberCreate(array $params): array
+    {
+        return $this->httpPost('buyin/shopPidMemberCreate', $params);
+    }
+
+    /**
+     * 查询商品 SKU.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function productSkus(array $params): array
+    {
+        return $this->httpPost('buyin/productSkus', $params);
+    }
 }

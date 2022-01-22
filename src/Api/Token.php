@@ -19,4 +19,17 @@ class Token extends BaseRequest
     {
         return $this->httpPost('token/create', $params);
     }
+
+    /**
+     * 刷新 token API.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function refresh(array $params): array
+    {
+        return $this->httpPost('token/refresh', $params);
+    }
 }

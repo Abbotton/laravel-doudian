@@ -356,4 +356,17 @@ class Product extends BaseRequest
     {
         return $this->httpPost('product/qualificationConfig', $params);
     }
+
+    /**
+     * 查询商品发布规则.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getProductUpdateRule(array $params): array
+    {
+        return $this->httpPost('product/getProductUpdateRule', $params);
+    }
 }

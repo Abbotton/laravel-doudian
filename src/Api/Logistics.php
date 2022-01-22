@@ -281,4 +281,17 @@ class Logistics extends BaseRequest
     {
         return $this->httpPost('logistics/appendSubOrder', $params);
     }
+
+    /**
+     * 订单放行/回退.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function deliveryNotice(array $params): array
+    {
+        return $this->httpPost('logistics/deliveryNotice', $params);
+    }
 }

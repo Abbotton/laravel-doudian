@@ -396,21 +396,6 @@ class Order extends BaseRequest
     }
 
     /**
-     * 资金流水文件.
-     *
-     * @param  array  $params
-     *
-     * @return array
-     * @throws RequestException
-     *
-     * @throws InvalidArgumentException
-     */
-    public function getShopAccountItemFile(array $params): array
-    {
-        return $this->httpPost('order/getShopAccountItemFile', $params);
-    }
-
-    /**
      * 下载资金流水明细文件.
      *
      * @param  array  $params
@@ -453,5 +438,20 @@ class Order extends BaseRequest
     public function getShopAccountItem(array $params): array
     {
         return $this->httpPost('order/getShopAccountItem', $params);
+    }
+
+    /**
+     * 查询明文手机号报备接口(PS: 官方文档中方法名拼写错误).
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function orderReportList(array $params): array
+    {
+        return $this->httpPost('order/ordeReportList', $params);
     }
 }

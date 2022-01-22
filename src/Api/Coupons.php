@@ -68,21 +68,6 @@ class Coupons extends BaseRequest
     }
 
     /**
-     * 卡券核销接口.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     */
-    public function verify(array $params): array
-    {
-        return $this->httpPost('coupons/verify', $params);
-    }
-
-    /**
      * 卡券核销次数更新.
      *
      * @param array $params
