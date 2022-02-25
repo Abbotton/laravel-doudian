@@ -101,7 +101,12 @@ class BaseRequest
     protected function generateParams(string $url, array $params): array
     {
         $url = str_replace('/', '.', $url);
-        $accessToken = $this->getAccessToken();
+
+        $accessToken = "";
+        if (!in_array($url,["token.create","token.refresh"])){
+            $accessToken = $this->getAccessToken();
+        };
+
         $public = [
             'app_key' => $this->config['app_key'],
             'timestamp' => date('Y-m-d H:i:s'),
@@ -168,9 +173,9 @@ class BaseRequest
             $param['shop_id'] = $this->shop_id;
         }
 
-        $response = $this->httpGet('oauth2/access_token', $param, false);
+        $response = $this->httpGet('token/create', $param, true);
         if (! $response || $response['code'] > 10000) {
-            trigger_error("oauth2/access_token接口异常[{$response['code']}]");
+            trigger_error("token/create 接口异常[{$response['code']}]");
         }
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
@@ -199,9 +204,9 @@ class BaseRequest
             'refresh_token' => $refreshToken,
         ];
 
-        $response = $this->httpGet('oauth2/refresh_token', $param, false);
+        $response = $this->httpGet('token/refresh', $param, true);
         if (! $response || $response['code'] > 10000) {
-            trigger_error("oauth2/access_token接口异常[{$response['code']}]");
+            trigger_error("token/refresh 接口异常[{$response['code']}]");
         }
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
