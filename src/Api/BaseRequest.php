@@ -103,7 +103,7 @@ class BaseRequest
         $url = str_replace('/', '.', $url);
 
         $accessToken = "";
-        if (!in_array($url,["token.create","token.refresh"])){
+        if (! in_array($url, ["token.create","token.refresh"])) {
             $accessToken = $this->getAccessToken();
         };
 
