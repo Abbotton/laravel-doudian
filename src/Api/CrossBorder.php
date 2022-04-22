@@ -8,36 +8,6 @@ use Psr\SimpleCache\InvalidArgumentException;
 class CrossBorder extends BaseRequest
 {
     /**
-     * 查询跨境商家资金信息接口.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     */
-    public function queryBalance(array $params): array
-    {
-        return $this->httpPost('crossBorder/queryBalance', $params);
-    }
-
-    /**
-     * 银行信息校验.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     */
-    public function bankAccountVerify(array $params): array
-    {
-        return $this->httpPost('crossBorder/bankAccountVerify', $params);
-    }
-
-    /**
      * 查询跨境订单列表.
      *
      * @param array $params
@@ -170,5 +140,35 @@ class CrossBorder extends BaseRequest
     public function orderLogisticsTrace(array $params): array
     {
         return $this->httpPost('crossborder/orderLogisticsTrace', $params);
+    }
+
+    /**
+     * 获取交易订单状态.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function getTradeOrderStatus(array $params): array
+    {
+        return $this->httpPost('crossBorder/getTradeOrderStatus', $params);
+    }
+
+    /**
+     * 服务商回告海关税费.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function customsTaxInfo(array $params): array
+    {
+        return $this->httpPost('crossBorder/customsTaxInfo', $params);
     }
 }

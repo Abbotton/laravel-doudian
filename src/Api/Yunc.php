@@ -216,4 +216,34 @@ class Yunc extends BaseRequest
     {
         return $this->httpPost('wms/deliveryInfoNotify', $params);
     }
+
+    /**
+     * WMS出库明细回传.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     *
+     * @throws RequestException
+     */
+    public function outboundDetailNotify(array $params): array
+    {
+        return $this->httpPost('wms/outboundDetailNotify', $params);
+    }
+
+    /**
+     * 入库明细回传，WMS回传入库数据时，使用该接口回传.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     *
+     * @throws RequestException
+     */
+    public function inboundDetailNotify(array $params): array
+    {
+        return $this->httpPost('wms/inboundDetailNotify', $params);
+    }
 }

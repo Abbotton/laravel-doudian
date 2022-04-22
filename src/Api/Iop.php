@@ -172,4 +172,17 @@ class Iop extends BaseRequest
     {
         return $this->httpPost('iop/sellerCancleDistribute', $params);
     }
+
+    /**
+     * 【厂家】查询商家列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getSellerList(array $params): array
+    {
+        return $this->httpPost('iop/getSellerList', $params);
+    }
 }

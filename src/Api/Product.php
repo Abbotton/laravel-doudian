@@ -8,21 +8,6 @@ use Psr\SimpleCache\InvalidArgumentException;
 class Product extends BaseRequest
 {
     /**
-     * 运费模板查询.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     */
-    public function freightTemplateList(array $params = []): array
-    {
-        return $this->httpPost('freightTemplate/list', $params);
-    }
-
-    /**
      * 商品发布新接口.
      *
      * @param array $params
@@ -95,21 +80,6 @@ class Product extends BaseRequest
     public function productEditV2(array $params): array
     {
         return $this->httpPost('product/editV2', $params);
-    }
-
-    /**
-     * 根据商品分类获取对应的属性列表.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     */
-    public function getCateProperty(array $params): array
-    {
-        return $this->httpPost('product/getCateProperty', $params);
     }
 
     /**
@@ -368,5 +338,44 @@ class Product extends BaseRequest
     public function getProductUpdateRule(array $params): array
     {
         return $this->httpPost('product/getProductUpdateRule', $params);
+    }
+
+    /**
+     * 新增跨境/海南商品.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function addCbProduct(array $params): array
+    {
+        return $this->httpPost('product/addCbProduct', $params);
+    }
+
+    /**
+     * 编辑一个跨境/海南商品.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function editCbProduct(array $params): array
+    {
+        return $this->httpPost('product/editCbProduct', $params);
+    }
+
+    /**
+     * 审核记录列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function auditList(array $params): array
+    {
+        return $this->httpPost('product/auditList', $params);
     }
 }

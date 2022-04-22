@@ -294,4 +294,95 @@ class Logistics extends BaseRequest
     {
         return $this->httpPost('logistics/deliveryNotice', $params);
     }
+
+    /**
+     * 查询商家电子面单密钥.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getShopKey(array $params): array
+    {
+        return $this->httpPost('logistics/getShopKey', $params);
+    }
+
+    /**
+     * isv轨迹订阅.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function registerPackageRoute(array $params): array
+    {
+        return $this->httpPost('logistics/registerPackageRoute', $params);
+    }
+
+    /**
+     * 查询商家自定义模板（新版）.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getDesignTemplateList(array $params): array
+    {
+        return $this->httpPost('logistics/getDesignTemplateList', $params);
+    }
+
+    /**
+     * 一段码推送（包含末端中心、集包地、大头笔）（仅用于兼容老物流网关）.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function pushFirstSortCode(array $params): array
+    {
+        return $this->httpPost('power/pushFirstSortCode', $params);
+    }
+
+    /**
+     * 个性化集包编码推送（仅用于兼容老物流网关）.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function pushCustomSortCode(array $params): array
+    {
+        return $this->httpPost('power/pushCustomSortCode', $params);
+    }
+
+    /**
+     * 三段码推送（仅用于兼容老物流网关）.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function pushThirdSortCode(array $params): array
+    {
+        return $this->httpPost('power/pushThirdSortCode', $params);
+    }
+
+    /**
+     * 二段码推送（仅用于兼容老物流网关）.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function pushSecondSortCode(array $params): array
+    {
+        return $this->httpPost('power/pushSecondSortCode', $params);
+    }
 }

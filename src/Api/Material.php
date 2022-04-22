@@ -240,4 +240,17 @@ class Material extends BaseRequest
     {
         return $this->httpPost('material/batchUploadImageSync', $params);
     }
+
+    /**
+     * 获取商家容量详情.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function getCapInfo(array $params): array
+    {
+        return $this->httpPost('material/get_cap_info', $params);
+    }
 }

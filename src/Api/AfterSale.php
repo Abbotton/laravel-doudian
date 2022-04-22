@@ -113,21 +113,6 @@ class AfterSale extends BaseRequest
     }
 
     /**
-     * 售后审核接口聚合版.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     */
-    public function operate(array $params = []): array
-    {
-        return $this->httpPost('afterSale/Operate', $params);
-    }
-
-    /**
      * 打开售后通道，使用户可以发起超级售后.
      *
      * @param array $params
@@ -215,5 +200,20 @@ class AfterSale extends BaseRequest
     public function rejectReasonCodeList(array $params = []): array
     {
         return $this->httpPost('afterSale/rejectReasonCodeList', $params);
+    }
+
+    /**
+     * 售后审核接口聚合版.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     *
+     * @throws RequestException
+     */
+    public function operate(array $params = []): array
+    {
+        return $this->httpPost('afterSale/operate', $params);
     }
 }

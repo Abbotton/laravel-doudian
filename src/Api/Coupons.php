@@ -96,4 +96,19 @@ class Coupons extends BaseRequest
     {
         return $this->httpPost('coupons/list', $params);
     }
+
+    /**
+     * 三方卡券延期.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     *
+     * @throws RequestException
+     */
+    public function extendCertValidEndByOrder(array $params): array
+    {
+        return $this->httpPost('coupons/extendCertValidEndByOrder', $params);
+    }
 }

@@ -420,19 +420,6 @@ class BuyIn extends BaseRequest
     }
 
     /**
-     * 获取分销商品列表.
-     *
-     * @param  array  $params
-     * @return array
-     * @throws InvalidArgumentException
-     * @throws RequestException
-     */
-    public function getProductShareMaterial(array $params): array
-    {
-        return $this->httpPost('buyin/getProductShareMaterial', $params);
-    }
-
-    /**
      * 店铺会员绑定渠道关系创建.
      *
      * @param  array  $params
@@ -456,5 +443,187 @@ class BuyIn extends BaseRequest
     public function productSkus(array $params): array
     {
         return $this->httpPost('buyin/productSkus', $params);
+    }
+
+    /**
+     * 商家可参与的团长活动查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function shopActivityList(array $params): array
+    {
+        return $this->httpPost('buyin/ShopActivityList', $params);
+    }
+
+    /**
+     * 延长推广待处理/已处理记录查询.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function activityProductExtendList(array $params): array
+    {
+        return $this->httpPost('buyin/activityProductExtendList', $params);
+    }
+
+    /**
+     * 商家处理团长活动商品的推广延期申请.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function activityProductExtendApprove(array $params): array
+    {
+        return $this->httpPost('buyin/activityProductExtendApprove', $params);
+    }
+
+    /**
+     * 团长可参与的二级团长活动查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function originColonelEnrollableActivityList(array $params): array
+    {
+        return $this->httpPost('buyin/originColonelEnrollableActivityList', $params);
+    }
+
+    /**
+     * 获取团长活动详情.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function colonelActivityDetail(array $params): array
+    {
+        return $this->httpPost('buyin/colonelActivityDetail', $params);
+    }
+
+    /**
+     * 团长获取可提报二级团长活动的商品列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function originColonelUnappliedProductList(array $params): array
+    {
+        return $this->httpPost('buyin/originColonelUnappliedProductList', $params);
+    }
+
+    /**
+     * 团长报名二级团长活动.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function originColonelApplyActivities(array $params): array
+    {
+        return $this->httpPost('buyin/originColonelApplyActivities', $params);
+    }
+
+    /**
+     * 商品选品来源转链.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instPickSourceConvert(array $params): array
+    {
+        return $this->httpPost('buyin/instPickSourceConvert', $params);
+    }
+
+    /**
+     * 机构选品GMV查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instGmv(array $params): array
+    {
+        return $this->httpPost('buyin/instGmv', $params);
+    }
+
+    /**
+     * 机构选品GMV明细查询接口.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function instGmvDetail(array $params): array
+    {
+        return $this->httpPost('buyin/instGmvDetail', $params);
+    }
+
+    /**
+     * 分销直播间商品列表.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function distributionLiveProductList(array $params): array
+    {
+        return $this->httpPost('buyin/distributionLiveProductList', $params);
+    }
+
+    /**
+     * 商品口令转商品解析.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function shareCommandParse(array $params): array
+    {
+        return $this->httpPost('buyin/shareCommandParse', $params);
+    }
+
+    /**
+     * 检索精选联盟商品，需达人授权.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolMaterialsProductsSearch(array $params): array
+    {
+        return $this->httpPost('buyin/kolMaterialsProductsSearch', $params);
+    }
+
+    /**
+     * 获取达人直播间分享链接.
+     *
+     * @param  array  $params
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws RequestException
+     */
+    public function kolLiveShare(array $params): array
+    {
+        return $this->httpPost('buyin/kolLiveShare', $params);
     }
 }

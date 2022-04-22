@@ -79,4 +79,34 @@ class Shop extends BaseRequest
     {
         return $this->httpPost('address/update', $params);
     }
+
+    /**
+     * 设置尾款信息.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     *
+     * @throws RequestException
+     */
+    public function setFinalPayment(array $params): array
+    {
+        return $this->httpPost('shop/setFinalPayment', $params);
+    }
+
+    /**
+     * 查询店铺的应用权益.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     *
+     * @throws RequestException
+     */
+    public function rightsInfo(array $params): array
+    {
+        return $this->httpPost('rights/info', $params);
+    }
 }

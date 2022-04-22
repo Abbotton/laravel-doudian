@@ -143,21 +143,6 @@ class Order extends BaseRequest
     }
 
     /**
-     * 查询订单账单明细.
-     *
-     * @param array $params
-     *
-     * @throws RequestException
-     * @throws InvalidArgumentException
-     *
-     * @return array
-     */
-    public function settle(array $params): array
-    {
-        return $this->httpPost('order/settle', $params);
-    }
-
-    /**
      * 获取运费险保单详情.
      *
      * @param array $params
@@ -453,5 +438,20 @@ class Order extends BaseRequest
     public function orderReportList(array $params): array
     {
         return $this->httpPost('order/ordeReportList', $params);
+    }
+
+    /**
+     * 商家结算账单.
+     *
+     * @param  array  $params
+     *
+     * @return array
+     * @throws RequestException
+     *
+     * @throws InvalidArgumentException
+     */
+    public function getSettleBillDetailV3(array $params): array
+    {
+        return $this->httpPost('order/getSettleBillDetailV3', $params);
     }
 }
